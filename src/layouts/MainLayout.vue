@@ -12,6 +12,7 @@
         />
         <q-toolbar-title>
           <q-img
+            @click="inicio()"
             class="q-mx-sm manito"
             src="../assets/1x/Recurso1.png"
             fit="scale-down"
@@ -77,28 +78,37 @@
     <!-- footer -->
     <div class="text-white footer-container">
       <div class="row bg-accent q-py-lg">
-        <div class="col text-center">
+        <div class="col text-center" :class="swing">
           <a
             href="https://es-la.facebook.com/"
             target="_blank"
             class="custom-link"
-            ><q-icon class="fa-brands fa-facebook manito" size="md"
+            ><q-icon
+              @mouseover="handleMouseOver"
+              class="fa-brands fa-facebook manito"
+              size="md"
           /></a>
         </div>
-        <div class="col text-center">
+        <div class="col text-center" :class="swing">
           <a
             href="https://www.instagram.com/"
             target="_blank"
             class="custom-link"
-            ><q-icon class="fa-brands fa-instagram manito" size="md"
+            ><q-icon
+              @mouseover="handleMouseOver"
+              class="fa-brands fa-instagram manito"
+              size="md"
           /></a>
         </div>
-        <div class="col text-center">
+        <div class="col text-center" :class="swing">
           <a
             href="https://www.linkedin.com/"
             target="_blank"
             class="custom-link"
-            ><q-icon class="fa-brands fa-linkedin manito" size="md"
+            ><q-icon
+              @mouseover="handleMouseOver"
+              class="fa-brands fa-linkedin manito"
+              size="md"
           /></a>
         </div>
       </div>
@@ -127,23 +137,67 @@
     </div>
   </q-layout>
 </template>
+<script setup>
+import { onMounted, ref } from "vue";
+import { useRouter, useRoute } from "vue-router";
+const leftDrawerOpen = ref(false);
+const router = useRouter();
+const inicio = () => {
+  router.push("/");
+};
 
-<script>
-import { ref } from "vue";
+const toggleLeftDrawer = () => {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+};
+const handleMouseOver = () => {
+  animateElement();
+};
+const swing = ref("");
+const animateElement = () => {
+  swing.value = "animate__animated animate__swing";
+  setTimeout(() => {
+    swing.value = "";
+  }, 1000);
+};
+
+const elementToObserve = ref(null);
+onMounted(() => {
+  // const options = {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.5, // Porcentaje del elemento visible en el área de observación para disparar la intersección
+  // };
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       // El elemento es visible en el área de observación
+  //       handleElementVisible(entry.target);
+  //     }
+  //   });
+  // }, options);
+  // observer.observe(elementToObserve.value);
+});
+
+const handleElementVisible = (target) => {
+  animateElement();
+  console.log("Elemento visible:", target);
+  // Lógica para manejar cuando el elemento es visible cada vez que se muestra
+};
+</script>
+<!-- <script>
+
 
 export default {
   setup() {
-    const leftDrawerOpen = ref(false);
 
     return {
+      inicio,
       leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
+      ,
     };
   },
 };
-</script>
+</script> -->
 <style lang="scss">
 .custom-link {
   text-decoration: none; /* Elimina la subrayado del enlace */

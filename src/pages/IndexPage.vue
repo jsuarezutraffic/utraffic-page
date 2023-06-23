@@ -1,10 +1,10 @@
 <template>
   <q-page class="bg-primary">
-    <div class="row contenedor">
+    <div class="row">
       <!-- contenedor de imagen Carretera -->
-      <div class="col-md-8 col-lg-6 flex flex-center">
+      <div class="col-xs-12 col-md-8 col-lg-6 flex flex-center">
         <q-img
-          class="rounded-corner"
+          class="rounded-img-bottom-left"
           src="~assets/3x/Recurso3@3x.png"
           fit="fill"
         />
@@ -22,11 +22,11 @@
           SOMOS U TRAFFI
         </p>
 
-        <p class="sub-title text-weight-bold text-white">
+        <p class="sub-title text-weight-bold text-white text-uppercase">
           SOMOS EL
           <span class="text-italic text-weight-regular text-secondary"
             >ONE STOP SHOP </span
-          >CONCESIONES VIALES
+          >de las CONCESIONES VIALES
         </p>
 
         <p
@@ -88,7 +88,7 @@
             </div>
           </div> -->
           <div class="col-md-2 col-lg-2 bg-primary flex flex-center">
-            <div class="text-center manito">
+            <div class="text-center">
               <q-img
                 class="q-my-md"
                 src="~assets/3x/Recurso4@3x.png"
@@ -103,7 +103,7 @@
             </div>
           </div>
           <div class="col-md-2 col-lg-2 bg-secondary flex flex-center">
-            <div class="text-center manito">
+            <div class="text-center">
               <q-img
                 class="q-my-md"
                 src="~assets/3x/Recurso4(2)@3x.png"
@@ -118,7 +118,7 @@
             </div>
           </div>
           <div class="col-md-2 col-lg-2 bg-accent flex flex-center">
-            <div class="text-center manito">
+            <div class="text-center">
               <q-img
                 class="q-my-md"
                 src="~assets/3x/Recurso5@3x.png"
@@ -133,7 +133,7 @@
             </div>
           </div>
           <div class="col-md-2 col-lg-2 bg-primary flex flex-center">
-            <div class="text-center manito">
+            <div class="text-center">
               <q-img
                 class="q-my-md"
                 src="~assets/3x/Recurso6@3x.png"
@@ -150,15 +150,19 @@
         </div>
       </div>
 
-      <div
-        class="col-md-12 col-lg-12 text-center bg-secondary text-h3 text-weight-bold q-pa-md text-primary"
-      >
-        MÁS DE 15 AÑOS DE EXPERIENCIA
-      </div>
-
       <div class="col-md-12 col-lg-12">
         <div class="container-img">
+          <div
+            class="div-overlay4 bg-secondary text-primary text-left q-pa-lg"
+            :class="bounceInLeft"
+            ref="elementToObserve2"
+          >
+            <p class="text-h4 text-weight-bold q-ma-none">
+              MÁS DE 15 AÑOS DE EXPERIENCIA
+            </p>
+          </div>
           <q-img src="~assets/3x/Recurso7@3x.png" fit="fill" />
+
           <div class="text-overlay q-my-md">
             <p class="text-h3 text-weight-bold text-white text-left">
               SOMOS EL
@@ -170,67 +174,65 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 bg-white q-py-lg">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="numero-text">
+      <div class="col-md-12 col-lg-12 bg-white q-py-xl">
+        <div class="row q-my-xl">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">36</p>
               <span class="text-h4 text-primary q-mx-lg">
                 Carriles manuales
               </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">10+</p>
               <span class="text-h4 text-primary q-mx-lg">
                 proyectos entregados
               </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">14</p>
               <span class="text-h4 text-primary q-mx-lg">
                 Telepeajes en el extranjero
               </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">500+</p>
               <span class="text-h4 text-primary q-mx-lg">
                 Km de ITS de cielo abierto
               </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">92</p>
               <span class="text-h4 text-primary q-mx-lg">
                 Carriles manuales y 32 carriles de telepeaje en Colombia
               </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
-              <span class="text-h4 text-primary q-mx-lg"> O&M en más de </span>
-              <p class="text-h1 text-weight-bold text-primary">1000</p>
-              <span class="text-h4 text-primary q-mx-lg"
-                >de vía consecionada</span
-              >
+          <div class="col-md-6 q-my-md">
+            <div style="margin: 0 0 0 10%">
+              <span class="text-h4 text-primary"> O&M en más de </span>
+              <p class="text-h1 text-weight-bold text-primary">1000km</p>
+              <span class="text-h4 text-primary"> de vía consecionada </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">32</p>
               <span class="text-h4 text-primary q-mx-lg">
                 Peajes en operación
               </span>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="numero-text">
+          <div class="col-md-6 q-my-md">
+            <div class="number-text-inline">
               <p class="text-h1 text-weight-bold text-primary">35km</p>
               <span class="text-h4 text-primary q-mx-lg">
                 Peajes en operación
@@ -250,68 +252,3 @@ export default defineComponent({
   name: "IndexPage",
 });
 </script>
-<style lang="scss">
-.rounded-corner {
-  border-radius: 0 0 10% 0;
-  overflow: hidden;
-  max-width: 800px;
-  height: 600px;
-  margin: 12% 5% 5% 10%;
-}
-
-.title {
-  margin: 0%;
-  font-size: 40px;
-}
-
-.sub-title {
-  margin: 0%;
-  font-size: 25px;
-}
-
-.sub-title2 {
-  font-size: 20px;
-}
-
-.container-img {
-  position: relative;
-  width: 100%;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  // transform: translate(-100%, -50%);
-  text-align: left;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.numero-text {
-  // padding: top right buttom left;
-  padding: 0% 10% 0% 10%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-.contenedor {
-  position: relative;
-}
-
-.superior {
-  height: 200px;
-  background-color: lightgray;
-}
-
-.inferior {
-  height: 200px;
-  background-color: lightgray;
-}
-
-.manito {
-  cursor: pointer;
-}
-</style>

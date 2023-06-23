@@ -11,7 +11,11 @@
                 SEGURIDAD Y SEÑALIZACIÓN
               </p>
             </div>
-            <div class="col-md-3 col-lg-3 q-pa-lg padding-cero">
+            <div
+              class="col-md-3 col-lg-3 q-pa-lg padding-cero"
+              ref="elementToObserve3"
+              :class="swing"
+            >
               <div
                 class="bg-accent text-left q-pa-lg center-vertical-div"
                 style="height: 100%"
@@ -42,7 +46,11 @@
                 style="max-width: 50px; height: 50px"
               />
             </div>
-            <div class="col-md-4 col-lg-4 q-pa-lg padding-cero">
+            <div
+              class="col-md-4 col-lg-4 q-pa-lg padding-cero"
+              ref="elementToObserve3"
+              :class="swing"
+            >
               <div
                 class="bg-secondary text-left q-pa-lg center-vertical-div"
                 style="height: 100%"
@@ -74,7 +82,7 @@
                 style="max-width: 50px; height: 50px"
               />
             </div>
-            <div class="col-md-3 col-lg-3 q-pa-lg padding-cero">
+            <div class="col-md-3 col-lg-3 q-pa-lg padding-cero" :class="swing">
               <div
                 class="bg-white text-left q-pa-lg center-vertical-div"
                 style="height: 100%"
@@ -97,7 +105,11 @@
               </div>
             </div>
           </div>
-          <div class="div-overlay4 bg-accent text-white text-left q-pa-lg">
+          <div
+            class="div-overlay4 bg-accent text-white text-left q-pa-lg"
+            :class="bounceInLeft"
+            ref="elementToObserve2"
+          >
             <p class="text-h4 text-weight-bold q-ma-none">
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
@@ -106,10 +118,14 @@
       </div>
     </div>
 
-    <div class="col-md-6 col-lg-6 bg-white">
+    <div
+      class="col-md-6 col-lg-6 bg-white"
+      :class="bounceIn"
+      ref="elementToObserve"
+    >
       <div class="row q-my-xl q-pa-xl">
         <div class="col-md-12 col-lg-12">
-          <div class="numero-text2">
+          <div class="number-text-inline">
             <p class="text-h1 text-weight-bold text-accent">1000km</p>
             <span class="text-h4 text-primary q-mx-lg">
               de vías intervenidas
@@ -117,7 +133,7 @@
           </div>
         </div>
         <div class="col-md-12 col-lg-12">
-          <div class="numero-text2">
+          <div class="number-text-inline">
             <p class="text-h1 text-weight-bold text-accent">+10K</p>
             <span class="text-h4 text-primary q-mx-lg">
               Metros lineales de defensas instaladas
@@ -125,7 +141,7 @@
           </div>
         </div>
         <div class="col-md-12 col-lg-12">
-          <div class="numero-text2">
+          <div class="number-text-inline">
             <p class="text-h1 text-weight-bold text-accent">+10.000</p>
             <span class="text-h4 text-primary q-mx-lg">
               Señales verticales instaladas
@@ -134,40 +150,64 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-lg-6 flex flex-center bg-white">
+    <div
+      class="col-md-6 col-lg-6 flex flex-center bg-white"
+      :class="bounceIn"
+      ref="elementToObserve"
+    >
       <q-img
-        class="rounded-corner2"
+        class="rounded-img-bottom-left"
         src="~assets/3x/Recurso22@3x.png"
         fit="fill"
       />
     </div>
   </div>
 </template>
-<script>
-import { defineComponent } from "vue";
-export default defineComponent({
-  name: "IndexPage",
-});
-</script>
-<style lang="scss">
-.div-overlay4 {
-  border-radius: 0 0 40px 0;
-  //centrar un objeto absoluto orizontalmente
-  position: absolute;
-  // top: 0%;
-  left: 5%;
-  right: 50%;
-  bottom: -5vh;
-  padding: auto;
-  z-index: 1;
-}
-.rounded-corner2 {
-  border-radius: 0 0 0 80px;
-  overflow: hidden;
-  margin: 12% 5% 5% 10%;
-}
+<script setup>
+import { onMounted } from "vue";
+import { ref } from "vue";
 
-.padding-cero {
-  padding: 0%;
-}
-</style>
+const swing = ref("");
+const bounceIn = ref("");
+const bounceInLeft = ref("");
+const animateElement = () => {
+  bounceIn.value = "animate__animated animate__pulse";
+  swing.value = "animate__animated animate__swing";
+  bounceInLeft.value = "animate__animated animate__bounceInLeft";
+  setTimeout(() => {
+    bounceIn.value = "";
+    swing.value = "";
+    bounceInLeft.value = "";
+  }, 1000);
+};
+
+const elementToObserve = ref(null);
+const elementToObserve2 = ref(null);
+const elementToObserve3 = ref(null);
+onMounted(() => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Porcentaje del elemento visible en el área de observación para disparar la intersección
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // El elemento es visible en el área de observación
+        handleElementVisible(entry.target);
+      }
+    });
+  }, options);
+
+  observer.observe(elementToObserve.value);
+  observer.observe(elementToObserve2.value);
+  observer.observe(elementToObserve3.value);
+});
+
+const handleElementVisible = (target) => {
+  animateElement();
+  console.log("Elemento visible:", target);
+  // Lógica para manejar cuando el elemento es visible cada vez que se muestra
+};
+</script>

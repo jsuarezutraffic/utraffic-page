@@ -4,14 +4,14 @@
       <div class="col-md-12 col-lg-12">
         <div class="container-img bg-white">
           <q-img src="~assets/3x/Recurso8@3x.png" fit="fill" />
-          <div class="text-overlay2 q-my-xl">
+          <div class="text-overlay-title q-my-xl">
             <p class="text-h3 text-weight-bold text-white">
               SOMOS EL
               <span class="text-italic text-weight-regular">ONE STOP SHOP </span
               >DE LAS CONCESIONES VIALES
             </p>
           </div>
-          <div class="row justify-center div-overlay">
+          <div class="row justify-center div-overlay-four-items">
             <div
               class="col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
             >
@@ -162,135 +162,3 @@ const clikArea = (key) => {
   }
 };
 </script>
-<style lang="scss">
-// .animate__animated.animate__backOutUp {
-//   --animate-duration: 2s;
-//   transform: translateY(-100px) scale(1);
-// }
-.div-rounded {
-  border-radius: 0 0 30px 0;
-}
-.div-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-.title {
-  margin: 0%;
-  font-size: 40px;
-}
-
-.sub-title {
-  margin: 0%;
-  font-size: 25px;
-}
-
-.sub-title2 {
-  font-size: 20px;
-}
-.container-img {
-  position: relative;
-  width: 100%;
-}
-.contenedor {
-  position: relative;
-}
-.manito {
-  cursor: pointer;
-}
-.text-overlay2 {
-  //centrar un objeto absoluto orizontalmente
-  position: absolute;
-  top: 3%;
-  left: 0%;
-  right: 0%;
-  text-align: center;
-  padding: auto;
-}
-.container-div {
-  position: relative;
-}
-.div-overlay {
-  //centrar un objeto absoluto orizontalmente
-  position: absolute;
-  // top: 0%;
-  left: 0%;
-  right: 0%;
-  bottom: -10%;
-  text-align: center;
-  padding: auto;
-}
-
-.div-overlay2 {
-  border-radius: 0 0 40px 0;
-  //centrar un objeto absoluto orizontalmente
-  position: absolute;
-  // top: 0%;
-  left: 10%;
-  right: 55%;
-  bottom: 10%;
-  padding: auto;
-}
-.div-overlay3 {
-  border-radius: 0 0 40px 0;
-  //centrar un objeto absoluto orizontalmente
-  position: absolute;
-  // top: 0%;
-  left: 10%;
-  right: -5%;
-  bottom: -5vh;
-  padding: auto;
-  z-index: 1;
-}
-.numero-text2 {
-  // padding: top right buttom left;
-  padding: 0% 5% 0% 5%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-.numero-text {
-  // padding: top right buttom left;
-  padding: 0% 10% 0% 10%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-//centrar div verticalmente   --- LOS hijos se centraran verticalmente
-.center-vertical-div {
-  display: flex;
-  align-items: center;
-}
-
-//centrar div verticalmente   --- LOS hijos se centraran verticalmente
-.center-vertical-horzontal-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-//efecto de click
-.clickeable {
-  position: relative;
-  overflow: hidden;
-}
-
-.clickeable::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.clickeable:active::after {
-  transform: translate(-50%, -50%) scale(2);
-  opacity: 1;
-}
-</style>

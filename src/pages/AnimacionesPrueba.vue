@@ -1,43 +1,41 @@
 <template>
   <div>
-    <button
-      @click="
-        animateElement();
-        verDiv = true;
-      "
+    <div style="background-color: aqua; height: 1000px"></div>
+    <div
+      ref="elementToObserve"
+      style="background-color: rgb(255, 81, 0); height: 1000px"
     >
-      Animate Element
-    </button>
-    <h1
-      v-if="verDiv"
-      :class="animatedClass"
-      style="transform: translateY(20vh); transition: transform 1s"
-    >
-      An animated element
-    </h1>
-    <h1 v-if="verDiv" :class="animatedClass2">An animated element</h1>
+      <!-- Contenido del elemento a observar -->
+    </div>
   </div>
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 import { ref } from "vue";
 
-const verDiv = ref(false);
-const animatedClass = ref("");
-const animatedClass2 = ref("");
+const elementToObserve = ref(null);
+onMounted(() => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Porcentaje del elemento visible en el área de observación para disparar la intersección
+  };
 
-const animateElement = () => {
-  animatedClass.value = "animate__animated animate__backOutUp";
-  animatedClass2.value = "animate__animated animate__backInUp";
-  setTimeout(() => {
-    animatedClass.value = "";
-    animatedClass2.value = "";
-  }, 1000);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // El elemento es visible en el área de observación
+        handleElementVisible(entry.target);
+      }
+    });
+  }, options);
+
+  observer.observe(elementToObserve.value);
+});
+
+const handleElementVisible = (target) => {
+  console.log("Elemento visible:", target);
+  // Lógica para manejar cuando el elemento es visible cada vez que se muestra
 };
 </script>
-
-<style>
-h1 {
-  /* Estilos adicionales para el elemento h1 */
-}
-</style>

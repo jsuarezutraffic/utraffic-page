@@ -1,6 +1,6 @@
 <template>
   <q-page class="bg-primary">
-    <div class="row contenedor">
+    <div class="row">
       <div class="col-md-6 col-lg-6">
         <div
           class="col-md-4 col-lg-6"
@@ -35,7 +35,7 @@
       </div>
       <div class="col-md-6 col-lg-6 bg-white contenedor-union">
         <div
-          class="col-md-12 col-lg-12 text-center bg-secondary text-h3 q-pa-sm q-my-xl text-primary div-rounded"
+          class="col-md-12 col-lg-12 text-center bg-secondary text-h3 q-pa-sm q-my-xl text-primary div-rounded-bottom-right"
         >
           U con <span class="text-weight-bold q-my-lg">U de Union</span>
         </div>
@@ -52,46 +52,3 @@ export default defineComponent({
   name: "IndexPage",
 });
 </script>
-<style lang="scss">
-.div-rounded {
-  border-radius: 0 0 30px 0;
-}
-
-.title {
-  margin: 0%;
-  font-size: 40px;
-}
-
-.sub-title {
-  margin: 0%;
-  font-size: 25px;
-}
-
-.sub-title2 {
-  font-size: 20px;
-}
-
-.container-img {
-  position: relative;
-  width: 100%;
-}
-
-.numero-text {
-  // padding: top right buttom left;
-  padding: 0% 10% 0% 10%;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-.contenedor {
-  position: relative;
-}
-.contenedor-union {
-  padding: 5%;
-}
-
-.manito {
-  cursor: pointer;
-}
-</style>
