@@ -13,74 +13,70 @@
           </div>
           <div class="row justify-center div-overlay-four-items">
             <div
-              class="col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
+              class="col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
             >
               <div
                 :class="'text-center manito ' + bounceIn"
                 @click="clikArea('peaje')"
               >
                 <q-img
-                  class="q-my-md"
+                  class="q-my-md img-icon"
                   src="~assets/3x/Recurso4@3x.png"
                   fit="scale-down"
-                  style="max-width: 150px; height: 150px"
                 />
                 <p
-                  class="text-weight-bold text-white text-center q-mx-xl text-uppercase"
+                  class="text-h6 text-weight-bold text-white text-center q-mx-xl text-uppercase"
                 >
                   Peajes
                 </p>
               </div>
             </div>
             <div
-              class="col-md-2 col-lg-2 bg-secondary flex flex-center clickeable"
+              class="col-xs-3 col-md-2 col-lg-2 bg-secondary flex flex-center clickeable"
               @click="clikArea('its')"
             >
               <div :class="'text-center manito ' + bounceIn">
                 <q-img
-                  class="q-my-md"
+                  class="q-my-md img-icon"
                   src="~assets/3x/Recurso4(2)@3x.png"
                   fit="scale-down"
-                  style="max-width: 150px; height: 150px"
                 />
                 <p
-                  class="text-weight-bold text-primary text-center q-mx-lg text-uppercase"
+                  class="text-h6 text-weight-bold text-primary text-center q-mx-lg text-uppercase"
                 >
                   INTELLIGENT TRANSPORTATION SYSTEMS (ITS)
                 </p>
               </div>
             </div>
             <div
-              class="col-md-2 col-lg-2 bg-accent flex flex-center clickeable"
+              class="col-xs-3 col-md-2 col-lg-2 bg-accent flex flex-center clickeable"
               @click="clikArea('seguridad')"
             >
               <div :class="'text-center manito ' + bounceIn">
                 <q-img
-                  class="q-my-md"
+                  class="q-my-md img-icon"
                   src="~assets/3x/Recurso5@3x.png"
                   fit="scale-down"
-                  style="max-width: 150px; height: 150px"
                 />
                 <p
-                  class="text-weight-bold text-white text-center q-mx-lg text-uppercase"
+                  class="text-h6 text-weight-bold text-white text-center q-mx-lg text-uppercase"
                 >
                   SEGURIDAD Y SEÑALIZACIÓN
                 </p>
               </div>
             </div>
             <div
-              class="col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
+              class="col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
               @click="clikArea('mantenimiento')"
             >
               <div :class="'text-center manito ' + bounceIn">
                 <q-img
-                  class="q-my-md"
+                  class="q-my-md img-icon"
                   src="~assets/3x/Recurso6@3x.png"
                   fit="scale-down"
-                  style="max-width: 150px; height: 150px"
                 />
                 <p
-                  class="text-weight-bold text-white text-center q-mx-lg text-uppercase"
+                  class="text-h6 text-weight-bold text-white text-center q-mx-lg text-uppercase"
                 >
                   MANTENIMIENTO Y OPERACIÓN
                 </p>
@@ -90,7 +86,10 @@
         </div>
       </div>
 
-      <div class="col-md-12 col-lg-12 bg-white" style="height: 25vh"></div>
+      <div
+        class="col-md-12 col-lg-12 bg-white div-espaciado"
+        style="height: 25vh"
+      ></div>
 
       <!-- Contenedor de Peaje -->
       <div class="col-md-12 col-lg-12" :class="bounceInLeft">

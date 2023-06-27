@@ -2,14 +2,17 @@
   <q-layout view="hHh lpR fFf">
     <q-header class="bg-white q-pa-sm text-white">
       <q-toolbar>
-        <q-btn
-          dense
-          round
-          icon="drag_handle"
-          @click="toggleLeftDrawer"
-          color="accent"
-          size="md"
-        />
+        <div class="btn-menu">
+          <q-btn
+            dense
+            round
+            icon="drag_handle"
+            @click="toggleLeftDrawer"
+            color="accent"
+            size="md"
+          />
+        </div>
+
         <q-toolbar-title>
           <q-img
             @click="inicio()"
@@ -19,7 +22,7 @@
             style="max-width: 60px; height: 70px"
           />
         </q-toolbar-title>
-        <div class="">
+        <div class="btns-header">
           <q-btn
             size="15px"
             no-caps
@@ -50,25 +53,45 @@
             class="q-mx-md"
             color="primary"
             label="Hablemos"
-            to="/nosotros"
           />
-          <!-- <q-btn no-caps flat>
-            <div class="text-right">
-              <div
-                class="text-secondary text-weight-bold"
-                style="display: block; margin-bottom: -8px"
-              >
-                03
-              </div>
-              <div class="text-primary" style="display: block">Contacto</div>
-            </div>
-          </q-btn> -->
         </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" side="left" overlay bordered>
-      <!-- drawer content -->
+    <q-drawer v-model="leftDrawerOpen" side="left" overlay elevated width="200">
+      <q-scroll-area class="fit" :horizontal-thumb-style="{ opacity: 0 }">
+        <q-list padding>
+          <q-item clickable v-ripple to="/nosotros">
+            <q-item-section avatar>
+              <q-icon name="home_work" />
+            </q-item-section>
+
+            <q-item-section>Nosotros </q-item-section>
+          </q-item>
+          <q-item clickable v-ripple to="/quehacemos">
+            <q-item-section avatar>
+              <q-icon name="emoji_transportation" />
+            </q-item-section>
+
+            <q-item-section>Qué hacemos </q-item-section>
+          </q-item>
+          <q-item clickable v-ripple to="/nosotros">
+            <q-item-section avatar>
+              <q-icon name="contacts" />
+            </q-item-section>
+
+            <q-item-section>Contacto </q-item-section>
+          </q-item>
+          <q-separator />
+          <q-item clickable v-ripple to="/nosotros">
+            <q-item-section avatar>
+              <q-icon name="contacts" />
+            </q-item-section>
+
+            <q-item-section>Hablemos </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
     </q-drawer>
 
     <q-page-container>
@@ -113,7 +136,7 @@
         </div>
       </div>
       <div class="row bg-primary q-pa-lg justify-center">
-        <div class="col-2 text-center">
+        <div class="col-sm-2 col-xs-12 text-center q-my-md">
           <q-img
             class="q-mx-sm"
             src="../assets/3x/Recurso12@3x.png"
@@ -121,17 +144,17 @@
             style="max-width: 60px; height: 70px"
           />
         </div>
-        <div class="col-2 text-left">
+        <div class="col-sm-2 col-xs-4 text-left q-px-md">
           <p class="text-secondary">BOGOTÁ, CO.</p>
           <p class="text-white">Carrera 11 #79-66 <br />Oficina 440</p>
         </div>
-        <div class="col-2 text-left">
-          <p class="text-secondary">BOGOTÁ, CO.</p>
-          <p class="text-white">Carrera 11 #79-66 <br />Oficina 440</p>
+        <div class="col-sm-2 col-xs-4 text-left q-px-md">
+          <p class="text-secondary">Escríbenos</p>
+          <p class="text-white">hola@utraffic.co<br />Oficina 440</p>
         </div>
-        <div class="col-2 text-left">
-          <p class="text-secondary">BOGOTÁ, CO.</p>
-          <p class="text-white">Carrera 11 #79-66 <br />Oficina 440</p>
+        <div class="col-sm-2 col-xs-4 text-left q-px-md">
+          <p class="text-secondary">Llámanos</p>
+          <p class="text-white">T: +57(1)643 3069</p>
         </div>
       </div>
     </div>
@@ -180,24 +203,10 @@ onMounted(() => {
 
 const handleElementVisible = (target) => {
   animateElement();
-  console.log("Elemento visible:", target);
   // Lógica para manejar cuando el elemento es visible cada vez que se muestra
 };
 </script>
-<!-- <script>
 
-
-export default {
-  setup() {
-
-    return {
-      inicio,
-      leftDrawerOpen,
-      ,
-    };
-  },
-};
-</script> -->
 <style lang="scss">
 .custom-link {
   text-decoration: none; /* Elimina la subrayado del enlace */

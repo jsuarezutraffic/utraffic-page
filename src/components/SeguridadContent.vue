@@ -3,21 +3,22 @@
     <div class="col-md-12 col-lg-12">
       <div class="row">
         <div class="col-md-12 col-lg-12 container-img">
-          <div class="row q-pa-xl" style="margin-bottom: 5%">
-            <div class="col-md-12 col-lg-12 q-my-xl">
+          <div class="row q-pa-xl justify-center" style="margin-bottom: 5%">
+            <div class="col-xs-12 col-md-12 col-lg-12 q-my-xl">
               <p
                 class="text-h2 text-white text-weight-bold text-left q-px-lg text-uppercase"
               >
                 SEGURIDAD Y SEÑALIZACIÓN
               </p>
             </div>
+
             <div
-              class="col-md-3 col-lg-3 q-pa-lg padding-cero"
+              class="col-xs-12 col-md-3 col-lg-3 q-pa-lg padding-cero"
               ref="elementToObserve3"
               :class="swing"
             >
               <div
-                class="bg-accent text-left q-pa-lg center-vertical-div"
+                class="bg-accent text-left q-pa-lg center-vertical-horzontal-div"
                 style="height: 100%"
               >
                 <div class="text-center">
@@ -36,6 +37,7 @@
                 </div>
               </div>
             </div>
+
             <div
               class="col-md-1 col-lg-1 center-vertical-horzontal-div"
               style="padding: 0%; margin: 0%"
@@ -47,7 +49,7 @@
               />
             </div>
             <div
-              class="col-md-4 col-lg-4 q-pa-lg padding-cero"
+              class="col-xs-12 col-md-3 col-lg-3 q-pa-lg padding-cero"
               ref="elementToObserve3"
               :class="swing"
             >
@@ -72,6 +74,7 @@
                 </div>
               </div>
             </div>
+
             <div
               class="col-md-1 col-lg-1 center-vertical-horzontal-div"
               style="padding: 0%; margin: 0%"
@@ -82,7 +85,10 @@
                 style="max-width: 50px; height: 50px"
               />
             </div>
-            <div class="col-md-3 col-lg-3 q-pa-lg padding-cero" :class="swing">
+            <div
+              class="col-xs-12 col-md-3 col-lg-3 q-pa-lg padding-cero"
+              :class="swing"
+            >
               <div
                 class="bg-white text-left q-pa-lg center-vertical-div"
                 style="height: 100%"
@@ -106,7 +112,7 @@
             </div>
           </div>
           <div
-            class="div-overlay4 bg-accent text-white text-left q-pa-lg"
+            class="div-overlay-security bg-accent text-white text-left q-pa-lg"
             :class="bounceInLeft"
             ref="elementToObserve2"
           >
@@ -118,54 +124,65 @@
       </div>
     </div>
 
-    <div
-      class="col-md-6 col-lg-6 bg-white"
-      :class="bounceIn"
-      ref="elementToObserve"
-    >
-      <div class="row q-my-xl q-pa-xl">
-        <div class="col-md-12 col-lg-12">
-          <div class="number-text-inline">
-            <p class="text-h1 text-weight-bold text-accent">1000km</p>
-            <span class="text-h4 text-primary q-mx-lg">
-              de vías intervenidas
-            </span>
+    <div class="col-md-12 col-lg-12 bg-white q-py-xl q-my-lg">
+      <div class="row text-secondary">
+        <div class="col-md-6 col-lg-6 center-vertical-div">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 q-pa-lg">
+              <div class="text-left">
+                <div class="number-text-inline-short" ref="elementToObserve">
+                  <p class="text-h1 text-weight-bold text-accent">
+                    {{ counter1 }}km
+                  </p>
+                  <span class="text-h4 text-primary q-mx-lg">
+                    de vías intervenidas
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-12 q-pa-lg">
+              <div class="text-left">
+                <div class="number-text-inline-short" ref="elementToObserve">
+                  <p class="text-h1 text-weight-bold text-accent">
+                    +{{ counter2 }}K
+                  </p>
+                  <span class="text-h4 text-primary q-mx-lg">
+                    Metros lineales de defensas instaladas
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-12 q-pa-lg">
+              <div class="text-left">
+                <div class="number-text-inline-short" ref="elementToObserve">
+                  <p class="text-h1 text-weight-bold text-accent">
+                    +{{ counter3.toLocaleString() }}
+                  </p>
+                  <span class="text-h4 text-primary q-mx-lg">
+                    Señales verticales instaladas
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-12">
-          <div class="number-text-inline">
-            <p class="text-h1 text-weight-bold text-accent">+10K</p>
-            <span class="text-h4 text-primary q-mx-lg">
-              Metros lineales de defensas instaladas
-            </span>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-12">
-          <div class="number-text-inline">
-            <p class="text-h1 text-weight-bold text-accent">+10.000</p>
-            <span class="text-h4 text-primary q-mx-lg">
-              Señales verticales instaladas
-            </span>
-          </div>
+        <div
+          class="col-md-6 col-lg-6 container-img center-vertical-horzontal-div"
+        >
+          <q-img
+            class="rounded-img-bottom-right"
+            src="~assets/3x/Recurso22@3x.png"
+            fit="fill"
+          />
         </div>
       </div>
-    </div>
-    <div
-      class="col-md-6 col-lg-6 flex flex-center bg-white"
-      :class="bounceIn"
-      ref="elementToObserve"
-    >
-      <q-img
-        class="rounded-img-bottom-left"
-        src="~assets/3x/Recurso22@3x.png"
-        fit="fill"
-      />
     </div>
   </div>
 </template>
 <script setup>
 import { onMounted } from "vue";
 import { ref } from "vue";
+import { gsap } from "gsap";
 
 const swing = ref("");
 const bounceIn = ref("");
@@ -184,6 +201,61 @@ const animateElement = () => {
 const elementToObserve = ref(null);
 const elementToObserve2 = ref(null);
 const elementToObserve3 = ref(null);
+
+const counter1 = ref(0);
+const counter2 = ref(0);
+const counter3 = ref(0);
+const targetNumber1 = 1000; // Número final del contador
+const targetNumber2 = 10; // Número final del contador
+const targetNumber3 = 10000; // Número final del contador
+
+const count = () => {
+  gsap.to(counter1, {
+    value: targetNumber1,
+    duration: 1,
+    onUpdate: () => {
+      counter1.value = Math.ceil(counter1.value);
+    },
+    onComplete: () => {
+      // Lógica después de completar el contador
+    },
+    ease: "circ.out",
+  });
+
+  gsap.to(counter2, {
+    value: targetNumber2,
+    duration: 3,
+    onUpdate: () => {
+      counter2.value = Math.ceil(counter2.value);
+    },
+    onComplete: () => {
+      // Lógica después de completar el contador
+    },
+    ease: "circ.out",
+  });
+
+  gsap.to(counter3, {
+    value: targetNumber3,
+    duration: 1,
+    onUpdate: () => {
+      counter3.value = Math.ceil(counter3.value);
+    },
+    onComplete: () => {
+      // Lógica después de completar el contador
+    },
+    ease: "circ.out",
+  });
+};
+
+const handleElementVisible = (target) => {
+  counter1.value = 0;
+  counter2.value = 0;
+  counter3.value = 0;
+  count();
+  animateElement();
+  // Lógica para manejar cuando el elemento es visible cada vez que se muestra
+};
+
 onMounted(() => {
   const options = {
     root: null,
@@ -204,10 +276,4 @@ onMounted(() => {
   observer.observe(elementToObserve2.value);
   observer.observe(elementToObserve3.value);
 });
-
-const handleElementVisible = (target) => {
-  animateElement();
-  console.log("Elemento visible:", target);
-  // Lógica para manejar cuando el elemento es visible cada vez que se muestra
-};
 </script>

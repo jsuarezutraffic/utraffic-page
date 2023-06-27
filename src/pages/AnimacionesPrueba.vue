@@ -35,7 +35,6 @@ onMounted(() => {
 });
 
 const handleElementVisible = (target) => {
-  console.log("Elemento visible:", target);
   // Lógica para manejar cuando el elemento es visible cada vez que se muestra
 };
 </script>

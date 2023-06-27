@@ -6,18 +6,346 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.btn-menu {
+  display: none;
+}
+
+.btns-header {
+  display: block;
+}
+
+.img-icon {
+  max-width: 150px;
+  height: 150px
+}
+
+.img-icon-peajes {
+  max-width: 100px;
+  height: 100px
+}
+
+.img-icon-its {
+  max-width: 200px;
+  height: 200px
+}
+
+.marginy-etiquetas {
+  padding: 1% 0% 1% 0%;
+}
+
+.padding-img-peajes {
+  padding: 3% 3% 3% 3%;
+}
+
+.div-box-its {
+  padding: 5%;
+}
+
+.show-etiquetas-its {
+  display: block;
+}
+
+.hide-etiquetas-its {
+  display: none;
+}
+
+.div-pa-ma-xl {
+  margin: 2% 0% 2% 0%;
+  padding: 2% 0% 2% 0%;
+}
+
+
 /* Estilos para pantallas más pequeñas, como smartphones */
 @media (max-width: 767px) {
 
-  /* Modifica los estilos de los elementos para pantallas pequeñas */
-  /* Por ejemplo: reducir tamaños de fuente, ajustar márgenes, cambiar el diseño */
-  body {
-    background-color: lightblue;
+  /* Modifica los estilos de los elementos para pantallas grandes */
+  /* Por ejemplo: restablecer tamaños de fuente, márgenes, distribución de columnas, etc. */
+  .show-etiquetas-its {
+    display: none;
   }
 
-  h1 {
-    font-size: 24px;
+  .div-pa-ma-xl {
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
   }
+
+  .hide-etiquetas-its {
+    display: block;
+  }
+
+  .btn-menu {
+    display: block
+  }
+
+  .btns-header {
+    display: none;
+  }
+
+  .img-icon {
+    max-width: 20vw;
+    height: 20vw
+  }
+
+  .div-box-its {
+    padding: 1%;
+  }
+
+  .img-icon-peajes {
+    max-width: 80px;
+    height: 80px
+  }
+
+  .img-icon-its {
+    max-width: 15vw;
+    height: 15vw
+  }
+
+  .padding-img-peajes {
+    padding: 1% 1% 1% 1%;
+  }
+
+  .div-overlay-four-items {
+    background-color: $primary;
+  }
+
+  .div-espaciado {
+    display: none;
+  }
+
+  .div-overlay-box-utoll {
+    //caja flotante de texto U TOLL
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 10%;
+    right: 40%;
+    bottom: 10%;
+    padding: 3%;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .text-overlay-title {
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    top: -5%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    padding: auto;
+  }
+
+  .div-overlay3 {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    // top: 0%;
+    left: 10%;
+    right: 15%;
+    bottom: -5%;
+    padding: 2%;
+    z-index: 1;
+    // right: 40%; left: 5%
+  }
+
+  .div-overlay-its {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    // top: 5%;
+    left: 10%;
+    right: 15%;
+    bottom: -10vh;
+    padding: 2%;
+    z-index: 1;
+  }
+
+  .div-overlay4 {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 5%;
+    right: 15%;
+    bottom: -5vh;
+    padding: 3%;
+    z-index: 1;
+  }
+
+  .div-overlay-security {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 5%;
+    right: 10%;
+    bottom: -5vh;
+    padding: auto;
+    z-index: 1;
+  }
+
+  .div-nosotros-text {
+    display: block;
+    padding: 5% 10% 5% 10%
+  }
+
+  // q-my-xl
+  // --------top   right   buttom   left---------
+  .marginy-etiquetas {
+    margin: -1% 0% -1% 0%;
+  }
+
+  // --------top   right   buttom   left---------
+
+  .rounded-img-bottom-left {
+    //redondeo de imagen en la parte inferior izquierda
+    border-radius: 40px 40px 40px 40px;
+    overflow: hidden;
+    margin: 5% 5% 5% 5%;
+  }
+
+  .div-somos-index {
+    display: block;
+    padding: 5% 5% 5% 5%
+  }
+
+  .rounded-img-bottom-right {
+    border-radius: 0 0 80px 0;
+    overflow: hidden;
+    // max-width: 800px;
+    // height: 600px;
+    margin: 0% 10% 0% 10%;
+  }
+
+  .number-text-inline {
+    //ubica el numero en la parte izq y el texto en la parte derecha
+    padding: 0% 10% 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .div-rounded-bottom-right {
+    border-radius: 0 0 30px 0;
+  }
+
+  .number-text-inline-short {
+    //ubica el numero en la parte izq y el texto en la parte derecha
+    padding: 0% 5% 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .container-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .div-mantenimiento {
+    padding-top: 5%;
+  }
+
+  .center-vertical-horzontal-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor {
+    position: relative;
+  }
+
+  .contenedor-union {
+    padding: 5%;
+  }
+
+  .padding-cero {
+    padding: 0%;
+  }
+
+  .manito {
+    cursor: pointer;
+  }
+
+  //EFECTO DE CLICK------
+  .clickeable {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .clickeable::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .clickeable:active::after {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+  }
+
+
+  //----FUENTES----
+  .title {
+    margin: 0%;
+    font-size: 40px;
+  }
+
+  .sub-title {
+    margin: 0%;
+    font-size: 25px;
+  }
+
+  .sub-title2 {
+    font-size: 20px;
+  }
+
+  .text-h1 {
+    font-size: 10vw;
+  }
+
+  .text-h2 {
+    font-size: 8vw;
+  }
+
+  .text-h3 {
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    // text-stroke: 1px $primary;
+  }
+
+  .text-h4 {
+    font-size: 15px;
+  }
+
+  .text-h5 {
+    font-size: 3vw;
+  }
+
+  .text-h6 {
+    font-size: 2vw;
+  }
+
 
   /* Agrega estilos adicionales para otros elementos según tus necesidades */
 }
@@ -25,14 +353,245 @@ body {
 /* Estilos para pantallas medianas, como tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
 
-  /* Modifica los estilos de los elementos para pantallas medianas */
-  /* Por ejemplo: ajustar tamaños de fuente, márgenes, distribución de columnas, etc. */
-  body {
-    background-color: lightgreen;
+  /* Modifica los estilos de los elementos para pantallas grandes */
+  /* Por ejemplo: restablecer tamaños de fuente, márgenes, distribución de columnas, etc. */
+  .div-overlay-four-items {
+    background-color: $primary;
+    padding: 3%;
   }
 
-  h1 {
-    font-size: 32px;
+  .marginy-etiquetas {
+    margin: 0% 0% 0% 0%;
+  }
+
+  .div-espaciado {
+    display: none;
+  }
+
+  .div-overlay-box-utoll {
+    //caja flotante de texto U TOLL
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 10%;
+    right: 40%;
+    bottom: 70%;
+    padding: 5%;
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .text-overlay-title {
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    padding: auto;
+  }
+
+  .div-overlay3 {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    // top: 0%;
+    left: 10%;
+    right: 25%;
+    bottom: 10%;
+    padding: 3%;
+    z-index: 1;
+    // right: 40%; left: 5%
+  }
+
+  .div-overlay-its {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    // top: 5%;
+    left: 10%;
+    right: 25%;
+    bottom: -5vh;
+    padding: 2%;
+    z-index: 1;
+  }
+
+  .div-overlay4 {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 5%;
+    right: 35%;
+    bottom: -5vh;
+    padding: 1%;
+    z-index: 1;
+  }
+
+  .div-overlay-security {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 5%;
+    right: 30%;
+    bottom: -5vh;
+    padding: auto;
+    z-index: 1;
+  }
+
+  .div-nosotros-text {
+    display: block;
+    padding: 5% 10% 5% 10%
+  }
+
+  // --------top   right   buttom   left---------
+
+  .rounded-img-bottom-left {
+    //redondeo de imagen en la parte inferior izquierda
+    border-radius: 40px 40px 40px 40px;
+    overflow: hidden;
+    margin: 5% 5% 5% 5%;
+  }
+
+  .div-somos-index {
+    display: block;
+    padding: 5% 5% 5% 5%
+  }
+
+  .rounded-img-bottom-right {
+    border-radius: 0 0 80px 0;
+    overflow: hidden;
+    // max-width: 800px;
+    // height: 600px;
+    margin: 0% 10% 0% 10%;
+  }
+
+  .number-text-inline {
+    //ubica el numero en la parte izq y el texto en la parte derecha
+    padding: 0% 10% 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .div-rounded-bottom-right {
+    border-radius: 0 0 30px 0;
+  }
+
+  .number-text-inline-short {
+    //ubica el numero en la parte izq y el texto en la parte derecha
+    padding: 0% 5% 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .container-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .div-mantenimiento {
+    padding-top: 5%;
+  }
+
+  .center-vertical-horzontal-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor {
+    position: relative;
+  }
+
+  .contenedor-union {
+    padding: 5%;
+  }
+
+  .padding-cero {
+    padding: 0%;
+  }
+
+  .manito {
+    cursor: pointer;
+  }
+
+  //EFECTO DE CLICK------
+  .clickeable {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .clickeable::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .clickeable:active::after {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+  }
+
+
+  //----FUENTES----
+  .title {
+    margin: 0%;
+    font-size: 40px;
+  }
+
+  .sub-title {
+    margin: 0%;
+    font-size: 25px;
+  }
+
+  .sub-title2 {
+    font-size: 20px;
+  }
+
+  .text-h1 {
+    font-size: 70px;
+  }
+
+  .text-h2 {
+    font-size: 60px;
+  }
+
+  .text-h3 {
+    font-size: 42px;
+  }
+
+  .text-h4 {
+    font-size: 24px;
+  }
+
+  .text-h5 {
+    font-size: 18px;
+  }
+
+  .text-h6 {
+    font-size: 18px;
   }
 
   /* Agrega estilos adicionales para otros elementos según tus necesidades */
@@ -45,6 +604,7 @@ body {
   /* Por ejemplo: restablecer tamaños de fuente, márgenes, distribución de columnas, etc. */
   .div-overlay-four-items {
     //caja flotante de 4 items pagina principal
+    padding: 3%;
     position: absolute;
     // top: 0%;
     left: 0%;
@@ -62,7 +622,7 @@ body {
     left: 10%;
     right: 55%;
     bottom: 10%;
-    padding: auto;
+    padding: 5%;
   }
 
   .text-overlay {
@@ -94,11 +654,37 @@ body {
     left: 10%;
     right: -5%;
     bottom: -5vh;
-    padding: auto;
+    padding: 3%;
     z-index: 1;
   }
 
+  .div-overlay-its {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    //centrar un objeto absoluto orizontalmente
+    position: absolute;
+    // top: 0%;
+    left: 7%;
+    right: 25%;
+    bottom: -5vh;
+    padding: 1%;
+    z-index: 1;
+  }
+
+
   .div-overlay4 {
+    //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+    border-radius: 0 0 40px 0;
+    position: absolute;
+    // top: 0%;
+    left: 5%;
+    right: 45%;
+    bottom: -5vh;
+    padding: 1%;
+    z-index: 1;
+  }
+
+  .div-overlay-security {
     //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
     border-radius: 0 0 40px 0;
     position: absolute;
@@ -110,19 +696,32 @@ body {
     z-index: 1;
   }
 
+  .div-nosotros-text {
+    display: block;
+    padding: 15% 10% 0% 10%
+  }
+
+  .div-somos-index {
+    display: block;
+    padding: 5% 5% 5% 5%
+  }
+
+  // --------top   right   buttom   left---------
+  .img-peaje-container {}
+
   .rounded-img-bottom-left {
     //redondeo de imagen en la parte inferior izquierda
-    border-radius: 0 0 0 80px;
+    border-radius: 40px 40px 40px 40px;
     overflow: hidden;
     margin: 12% 5% 5% 10%;
   }
 
-  .rounded-img-bottom-left {
-    border-radius: 0 0 10% 0;
+  .rounded-img-bottom-right {
+    border-radius: 0 0 80px 0;
     overflow: hidden;
-    max-width: 800px;
-    height: 600px;
-    margin: 12% 5% 5% 10%;
+    // max-width: 800px;
+    // height: 600px;
+    margin: 0% 10% 0% 10%;
   }
 
   .number-text-inline {
@@ -220,13 +819,234 @@ body {
     font-size: 20px;
   }
 
-  // body {
-  //   background-color: lightgray;
-  // }
+  .text-h1 {
+    font-size: 100px;
+  }
 
-  // h1 {
-  //   font-size: 48px;
-  // }
+  .text-h2 {
+    font-size: 60px;
+  }
+
+  .text-h3 {
+    font-size: 50px;
+  }
+
+  .text-h4 {
+    font-size: 34px;
+  }
+
+  .text-h5 {
+    font-size: 25px;
+  }
+
 
   /* Agrega estilos adicionales para otros elementos según tus necesidades */
 }
+
+// @media (min-width: 1025px) {
+
+//   /* Modifica los estilos de los elementos para pantallas grandes */
+//   /* Por ejemplo: restablecer tamaños de fuente, márgenes, distribución de columnas, etc. */
+//   .div-overlay-four-items {
+//     //caja flotante de 4 items pagina principal
+//     position: absolute;
+//     // top: 0%;
+//     left: 0%;
+//     right: 0%;
+//     bottom: -10%;
+//     text-align: center;
+//     padding: auto;
+//   }
+
+//   .div-overlay-box-utoll {
+//     //caja flotante de texto U TOLL
+//     border-radius: 0 0 40px 0;
+//     position: absolute;
+//     // top: 0%;
+//     left: 10%;
+//     right: 55%;
+//     bottom: 10%;
+//     padding: auto;
+//   }
+
+//   .text-overlay {
+//     position: absolute;
+//     top: 10px;
+//     left: 10px;
+//     text-align: left;
+//     color: white;
+//     text-align: center;
+//     padding: 20px;
+//   }
+
+//   .text-overlay-title {
+//     //centrar un objeto absoluto orizontalmente
+//     position: absolute;
+//     top: 3%;
+//     left: 0%;
+//     right: 0%;
+//     text-align: center;
+//     padding: auto;
+//   }
+
+//   .div-overlay3 {
+//     //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+//     border-radius: 0 0 40px 0;
+//     //centrar un objeto absoluto orizontalmente
+//     position: absolute;
+//     // top: 0%;
+//     left: 10%;
+//     right: -5%;
+//     bottom: -8vh;
+//     padding: auto;
+//     z-index: 1;
+//   }
+
+//   .div-overlay4 {
+//     //Cuadro de texto MÁS DE 15 AÑOS DE EXPERIENCIA
+//     border-radius: 0 0 40px 0;
+//     position: absolute;
+//     // top: 0%;
+//     left: 5%;
+//     right: 45%;
+//     bottom: -5vh;
+//     padding: auto;
+//     z-index: 1;
+//   }
+
+//   // --------top   right   buttom   left---------
+//   .img-peaje-container {}
+
+//   .rounded-img-bottom-left {
+//     //redondeo de imagen en la parte inferior izquierda
+//     border-radius: 0 0 0 80px;
+//     overflow: hidden;
+//     margin: 12% 5% 5% 10%;
+//   }
+
+//   .rounded-img-bottom-right {
+//     border-radius: 0 0 80px 0;
+//     overflow: hidden;
+//     // max-width: 800px;
+//     // height: 600px;
+//     margin: 0% 10% 0% 10%;
+//   }
+
+//   .number-text-inline {
+//     //ubica el numero en la parte izq y el texto en la parte derecha
+//     padding: 0% 10% 0% 10%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: left;
+//   }
+
+//   .div-rounded-bottom-right {
+//     border-radius: 0 0 30px 0;
+//   }
+
+//   .number-text-inline-short {
+//     //ubica el numero en la parte izq y el texto en la parte derecha
+//     padding: 0% 5% 0% 5%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: left;
+//   }
+
+//   .container-img {
+//     position: relative;
+//     width: 100%;
+//   }
+
+//   .center-vertical-div {
+//     //centrar div verticalmente   --- LOS hijos se centraran verticalmente
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .center-vertical-horzontal-div {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+//   .contenedor {
+//     position: relative;
+//   }
+
+//   .contenedor-union {
+//     padding: 5%;
+//   }
+
+//   .padding-cero {
+//     padding: 0%;
+//   }
+
+//   .manito {
+//     cursor: pointer;
+//   }
+
+//   //EFECTO DE CLICK------
+//   .clickeable {
+//     position: relative;
+//     overflow: hidden;
+//   }
+
+//   .clickeable::after {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(255, 255, 255, 0.4);
+//     border-radius: 50%;
+//     opacity: 0;
+//     pointer-events: none;
+//     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+//   }
+
+//   .clickeable:active::after {
+//     transform: translate(-50%, -50%) scale(2);
+//     opacity: 1;
+//   }
+
+
+//   //----FUENTES----
+//   .title {
+//     margin: 0%;
+//     font-size: 40px;
+//   }
+
+//   .sub-title {
+//     margin: 0%;
+//     font-size: 25px;
+//   }
+
+//   .sub-title2 {
+//     font-size: 20px;
+//   }
+
+//   .text-h1 {
+//     font-size: 100px;
+//   }
+
+//   .text-h2 {
+//     font-size: 60px;
+//   }
+
+//   .text-h3 {
+//     font-size: 50px;
+//   }
+
+//   .text-h4 {
+//     font-size: 34px;
+//   }
+
+//   .text-h5 {
+//     font-size: 25px;
+//   }
+
+
+//   /* Agrega estilos adicionales para otros elementos según tus necesidades */
+// }
