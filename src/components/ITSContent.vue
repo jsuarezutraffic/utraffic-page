@@ -3,7 +3,7 @@
     <div class="col-md-12 col-lg-12">
       <div class="row">
         <div class="col-md-12 col-lg-12 container-img">
-          <q-img src="~assets/3x/Recurso10@3x.png" fit="fill" />
+          <q-img src="~assets/3x/Recurso10@3x.jpeg" fit="fill" />
         </div>
         <div class="col-md-12 col-lg-12 center-vertical-div text-primary">
           <div class="row justify-between q-pa-xl">

@@ -3,7 +3,7 @@
     <div class="col-md-12 col-lg-12">
       <div class="row">
         <div class="col-md-6 col-lg-6 container-img">
-          <q-img src="~assets/3x/Recurso11@3x.png" class="fill" />
+          <q-img src="~assets/3x/Recurso11@3x.jpeg" class="fill" />
           <div
             class="div-overlay3 bg-secondary text-primary text-left q-pa-lg"
             :class="bounceInLeft"

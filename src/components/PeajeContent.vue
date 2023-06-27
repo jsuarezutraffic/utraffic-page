@@ -3,7 +3,7 @@
     <div class="col-md-12 col-lg-12">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-6 container-img">
-          <q-img src="~assets/3x/Recurso9@3x.png" fit="fill" />
+          <q-img src="~assets/3x/Recurso9@3x.jpeg" fit="fill" />
           <div
             class="div-overlay-box-utoll q-my-xl bg-accent text-secondary text-left"
             :class="fadeInRight"

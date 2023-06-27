@@ -171,7 +171,7 @@
         >
           <q-img
             class="rounded-img-bottom-right"
-            src="~assets/3x/Recurso22@3x.png"
+            src="~assets/3x/Recurso22@3x.jpeg"
             fit="fill"
           />
         </div>

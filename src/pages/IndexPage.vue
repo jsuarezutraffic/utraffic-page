@@ -147,7 +147,7 @@
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
           </div>
-          <q-img src="~assets/3x/Recurso7@3x.png" fit="fill" />
+          <q-img src="~assets/3x/Recurso7@3x.jpeg" fit="fill" />
 
           <div class="text-overlay q-my-md">
             <p class="text-h3 text-weight-bold text-white text-left">
