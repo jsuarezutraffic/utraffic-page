@@ -5,7 +5,7 @@
       <div class="col-sm-12 col-xs-12 col-md-7 col-lg-6 flex flex-center">
         <q-img
           class="rounded-img-bottom-left"
-          src="~assets/3x/Recurso3@3x.png"
+          src="~assets/3x/Recurso3@3x.jpeg"
           fit="fill"
         />
       </div>
