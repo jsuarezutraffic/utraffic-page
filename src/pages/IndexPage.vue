@@ -2,16 +2,36 @@
   <q-page class="bg-primary">
     <div class="row">
       <!-- contenedor de imagen Carretera -->
-      <div class="col-sm-12 col-xs-12 col-md-7 col-lg-6 flex flex-center">
-        <q-img
+      <div
+        class="col-sm-12 col-xs-12 col-md-6 col-lg-6"
+        :class="lightSpeedInLeft"
+      >
+        <q-carousel
+          class="rounded-img-bottom-left"
+          swipeable
+          animated
+          v-model="slide"
+          :autoplay="true"
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          ref="carousel"
+          infinite
+        >
+          <q-carousel-slide :name="5" img-src="~assets/3x/peaje.jpeg" />
+          <q-carousel-slide :name="2" img-src="~assets/3x/Recurso3@3x.jpeg" />
+          <q-carousel-slide :name="3" img-src="~assets/3x/Recurso7@3x.jpeg" />
+          <q-carousel-slide :name="4" img-src="~assets/3x/Recurso22@3x2.jpeg" />
+          <q-carousel-slide :name="1" img-src="~assets/3x/tunel2.jpeg" />
+        </q-carousel>
+        <!-- <q-img
           class="rounded-img-bottom-left"
           src="~assets/3x/Recurso3@3x.jpeg"
           fit="fill"
-        />
+        /> -->
       </div>
 
       <!-- contenedor Somos U Traffic -->
-      <div class="col-md-5 col-lg-6 div-somos-index">
+      <div class="col-md-6 col-lg-6 div-somos-index" :class="lightSpeedInRight">
         <p class="title text-weight-bold text-secondary">SOMOS U TRAFFIC</p>
 
         <p class="sub-title text-weight-bold text-white text-uppercase">
@@ -28,15 +48,17 @@
           Solución integral para peajes, ITS y operación de concesiones viales
         </p>
 
-        <p class="text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed mi
-          posuere, pretium velit sit amet, maximus felis. Ut molestie consequat
-          porta. Sed vitae elit at dui congue semper id mattis massa.
+        <p class="text-white text-justify">
+          U TRAFFIC es la unión de 4 empresas líderes en su sector, que tomaron
+          la decisión de unir esfuerzos para ofrecer un servicio integral a las
+          concesiones viales. Gracias a la transferencia de conocimientos y al
+          equipo humano de U Traffic, podemos trasladar la solidez y experiencia
+          de nuestros socios, junto con la integralidad de un servicio
+          consolidado, a todos nuestros potenciales clientes.
         </p>
-        <p class="text-white">
-          Nam a lectus quis augue pellentesque feugiat. Mauris condimentum
-          egestas lacus. Nulla interdum ut nulla eleifend dapibus. Aliquam
-          gravida justo dolor, ultricies
+        <p class="text-white text-justify">
+          De esta manera, proporcionamos soluciones a medida de las necesidades,
+          con confiabilidad y cumplimiento de resultados.
         </p>
       </div>
 
@@ -48,8 +70,8 @@
             style="padding: 5% 5% 5% 5%"
           >
             <div class="col-md-4 col-lg-6">
-              <p class="sub-title2 text-primary" style="margin: 0% 0% 0% 0%">
-                ¿Qué hacemos?
+              <p class="text-h4 text-primary" style="margin: 0% 0% 0% 0%">
+                ¿ Qué hacemos?
               </p>
 
               <p class="text-h4 text-weight-bold text-primary q-my-md">
@@ -58,11 +80,14 @@
                   >NOS MUEVE</span
                 >
               </p>
-              <p class="text-primary">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed
-                mi posuere, pretium velit sit amet, maximus felis. Ut molestie
-                consequat porta. Sed vitae elit at dui congue semper id mattis
-                massa.
+              <p class="text-primary text-justify">
+                Ofrecemos un servicio integral a las concesiones viales. Gracias
+                a la transferencia de conocimientos y al equipo humano de U
+                Traffic, podemos trasladar la solidez y experiencia de nuestros
+                socios, junto con la integralidad de un servicio consolidado, a
+                todos nuestros potenciales clientes. De esta manera,
+                proporcionamos soluciones a medida de las necesidades, con
+                confiabilidad y cumplimiento de resultados.
               </p>
               <q-btn no-caps size="sm" color="accent" label="más info" />
             </div>
@@ -85,7 +110,9 @@
             </div>
           </div>
 
-          <div class="q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-secondary">
+          <div
+            class="q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-secondary flex flex-center"
+          >
             <div class="text-center">
               <q-img
                 class="q-my-md img-icon"
@@ -147,12 +174,13 @@
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
           </div>
-          <q-img src="~assets/3x/Recurso7@3x.jpeg" fit="fill" />
+          <q-img src="~assets/3x/peaje2.jpeg" fit="fill" />
+          <!-- <q-img src="~assets/3x/Recurso7@3x.jpeg" fit="fill" /> -->
 
           <div class="text-overlay q-my-md">
-            <p class="text-h3 text-weight-bold text-white text-left">
+            <p class="text-h3 text-weight-bold text-primary text-left">
               SOMOS EL
-              <span class="text-italic text-weight-regular text-primary"
+              <span class="text-italic text-weight-regular text-accent"
                 >ONE STOP SHOP </span
               ><br />DE LAS CONCESIONES VIALES
             </p>
@@ -253,9 +281,16 @@ import { onMounted } from "vue";
 import { ref } from "vue";
 import { gsap } from "gsap";
 
+const slide = ref(1);
+
+const lightSpeedInRight = ref("");
+const lightSpeedInLeft = ref("");
+
 const bounceInLeft = ref("");
 const animateElement = () => {
   bounceInLeft.value = "animate__animated animate__bounceInLeft";
+  lightSpeedInRight.value = "animate__animated animate__lightSpeedInRight";
+  lightSpeedInLeft.value = "animate__animated animate__lightSpeedInLeft";
   setTimeout(() => {
     bounceInLeft.value = "";
   }, 1000);
@@ -276,7 +311,7 @@ const targetNumber2 = 10; // Número final del contador
 const targetNumber3 = 14; // Número final del contador
 const targetNumber4 = 500; // Número final del contador
 const targetNumber5 = 92; // Número final del contador
-const targetNumber6 = 10000; // Número final del contador
+const targetNumber6 = 1000; // Número final del contador
 const targetNumber7 = 32; // Número final del contador
 const targetNumber8 = 35; // Número final del contador
 
@@ -393,6 +428,7 @@ const handleElementVisible = (target) => {
 };
 
 onMounted(() => {
+  animateElement();
   const options = {
     root: null,
     rootMargin: "0px",

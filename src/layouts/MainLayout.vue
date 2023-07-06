@@ -45,15 +45,15 @@
             flat
             color="primary"
             label="Contacto"
-            to="/nosotros"
+            to="/contacto"
           />
-          <q-btn
+          <!-- <q-btn
             no-caps
             size="15px"
             class="q-mx-md"
             color="primary"
             label="Hablemos"
-          />
+          /> -->
         </div>
       </q-toolbar>
     </q-header>
@@ -75,21 +75,21 @@
 
             <q-item-section>Qué hacemos </q-item-section>
           </q-item>
-          <q-item clickable v-ripple to="/nosotros">
+          <q-item clickable v-ripple to="/contacto">
             <q-item-section avatar>
               <q-icon name="contacts" />
             </q-item-section>
 
             <q-item-section>Contacto </q-item-section>
           </q-item>
-          <q-separator />
+          <!-- <q-separator />
           <q-item clickable v-ripple to="/nosotros">
             <q-item-section avatar>
               <q-icon name="contacts" />
             </q-item-section>
 
             <q-item-section>Hablemos </q-item-section>
-          </q-item>
+          </q-item> -->
         </q-list>
       </q-scroll-area>
     </q-drawer>
@@ -100,7 +100,7 @@
 
     <!-- footer -->
     <div class="text-white footer-container">
-      <div class="row bg-accent q-py-lg">
+      <div class="row bg-accent q-py-lg iconos-fotter">
         <div class="col text-center" :class="swing">
           <a
             href="https://es-la.facebook.com/"
@@ -146,15 +146,16 @@
         </div>
         <div class="col-sm-2 col-xs-4 text-left q-px-md">
           <p class="text-secondary">BOGOTÁ, CO.</p>
-          <p class="text-white">Carrera 11 #79-66 <br />Oficina 440</p>
+          <p class="text-white">Carrera 13 #98-70 <br />Oficina 603</p>
         </div>
         <div class="col-sm-2 col-xs-4 text-left q-px-md">
           <p class="text-secondary">Escríbenos</p>
-          <p class="text-white">hola@utraffic.co<br />Oficina 440</p>
+          <p class="text-white">hola@utraffic.co<br />Oficina 603</p>
         </div>
         <div class="col-sm-2 col-xs-4 text-left q-px-md">
           <p class="text-secondary">Llámanos</p>
-          <p class="text-white">T: +57(1)643 3069</p>
+          <p class="text-white">(601) 572 4311</p>
+          <p class="text-white">+57 (318) 464 7436</p>
         </div>
       </div>
     </div>
@@ -184,22 +185,7 @@ const animateElement = () => {
 };
 
 const elementToObserve = ref(null);
-onMounted(() => {
-  // const options = {
-  //   root: null,
-  //   rootMargin: "0px",
-  //   threshold: 0.5, // Porcentaje del elemento visible en el área de observación para disparar la intersección
-  // };
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //     if (entry.isIntersecting) {
-  //       // El elemento es visible en el área de observación
-  //       handleElementVisible(entry.target);
-  //     }
-  //   });
-  // }, options);
-  // observer.observe(elementToObserve.value);
-});
+onMounted(() => {});
 
 const handleElementVisible = (target) => {
   animateElement();

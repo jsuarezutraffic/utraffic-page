@@ -17,16 +17,17 @@
             Solución integral para peajes, ITS y operación de concesiones viales
           </p>
 
-          <p class="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed mi
-            posuere, pretium velit sit amet, maximus felis. Ut molestie
-            consequat porta. Sed vitae elit at dui congue semper id mattis
-            massa.
+          <p class="text-white text-justify">
+            U Traffic es la unión de 4 empresas líderes en su sector, que
+            tomaron la decisión de unir esfuerzos para ofrecer un servicio
+            integral a las concesiones viales. Gracias a la transferencia de
+            conocimientos y al equipo humano de U Traffic, podemos trasladar la
+            solidez y experiencia de nuestros socios, junto con la integralidad
+            de un servicio consolidado, a todos nuestros potenciales clientes.
           </p>
-          <p class="text-white">
-            Nam a lectus quis augue pellentesque feugiat. Mauris condimentum
-            egestas lacus. Nulla interdum ut nulla eleifend dapibus. Aliquam
-            gravida justo dolor, ultricies
+          <p class="text-white text-justify">
+            De esta manera, proporcionamos soluciones a medida de las
+            necesidades, con confiabilidad y cumplimiento de resultados.
           </p>
         </div>
       </div>

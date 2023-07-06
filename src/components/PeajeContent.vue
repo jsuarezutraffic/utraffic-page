@@ -3,13 +3,14 @@
     <div class="col-md-12 col-lg-12">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-lg-6 container-img">
-          <q-img src="~assets/3x/Recurso9@3x.jpeg" fit="fill" />
+          <!-- <q-img src="~assets/3x/Recurso9@3x.jpeg" fit="fill" /> -->
+          <q-img src="~assets/3x/peaje.jpeg" fit="fill" />
           <div
-            class="div-overlay-box-utoll q-my-xl bg-accent text-secondary text-left"
+            class="div-overlay-box-utoll q-my-xl bg-primary text-secondary text-left"
             :class="fadeInRight"
             ref="elementToObserve3"
           >
-            <p class="text-h4 text-weight-bold">U TOLL</p>
+            <p class="text-h4 text-white text-weight-bold">U TOLL</p>
             <span class="text-weight-regular"
               >Software propio para la gestión, control de tráfico y recaudo en
               peajes. Soporta diferentes modelos de operación y tecnología, así
@@ -136,7 +137,7 @@
           <div class="number-text-inline">
             <p class="text-h1 text-weight-bold text-primary">{{ counter3 }}</p>
             <span class="text-h4 text-primary q-mx-lg">
-              Carriles manuales y 32 carroles telepeaje en Colombia
+              Carriles manuales y 32 carriles telepeaje en Colombia
             </span>
           </div>
         </div>

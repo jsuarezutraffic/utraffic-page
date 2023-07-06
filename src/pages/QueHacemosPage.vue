@@ -11,9 +11,12 @@
               >DE LAS CONCESIONES VIALES
             </p>
           </div>
-          <div class="row justify-center div-overlay-four-items">
+          <div
+            class="row justify-center div-overlay-four-items"
+            :class="zoomInDown"
+          >
             <div
-              class="col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
+              class="div-big col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
             >
               <div
                 :class="'text-center manito ' + bounceIn"
@@ -32,7 +35,7 @@
               </div>
             </div>
             <div
-              class="col-xs-3 col-md-2 col-lg-2 bg-secondary flex flex-center clickeable"
+              class="div-big col-xs-3 col-md-2 col-lg-2 bg-secondary flex flex-center clickeable"
               @click="clikArea('its')"
             >
               <div :class="'text-center manito ' + bounceIn">
@@ -49,7 +52,7 @@
               </div>
             </div>
             <div
-              class="col-xs-3 col-md-2 col-lg-2 bg-accent flex flex-center clickeable"
+              class="div-big col-xs-3 col-md-2 col-lg-2 bg-accent flex flex-center clickeable"
               @click="clikArea('seguridad')"
             >
               <div :class="'text-center manito ' + bounceIn">
@@ -66,7 +69,7 @@
               </div>
             </div>
             <div
-              class="col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
+              class="div-big col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center clickeable"
               @click="clikArea('mantenimiento')"
             >
               <div :class="'text-center manito ' + bounceIn">
@@ -103,6 +106,7 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
 import Peaje from "src/components/PeajeContent.vue";
 import Mantenimiento from "src/components/MantenimientoContent.vue";
 import Seguridad from "src/components/SeguridadContent.vue";
@@ -117,15 +121,29 @@ const mantenimiento = ref(false);
 const verDiv = ref(false);
 const bounceInLeft = ref("");
 const bounceIn = ref("");
+const zoomInDown = ref("");
+
+const classIconos = ref({
+  peaje: "",
+  its: "",
+  seguridad: "",
+  mantenimiento: "",
+});
 
 const animateElement = () => {
   bounceInLeft.value = "animate__animated animate__bounceInLeft";
   bounceIn.value = "animate__animated animate__bounceIn";
+  zoomInDown.value = "animate__animated animate__bounceIn";
   setTimeout(() => {
     bounceInLeft.value = "";
     bounceIn.value = "";
+    // zoomInDown.value = "";
   }, 1000);
 };
+
+onMounted(() => {
+  animateElement();
+});
 
 const clikArea = (key) => {
   animateElement();

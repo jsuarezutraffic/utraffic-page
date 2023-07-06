@@ -15,8 +15,18 @@ body {
 }
 
 .img-icon {
-  max-width: 150px;
-  height: 150px
+  max-width: 8vw;
+  height: 8vw;
+}
+
+.div-big {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.div-big:hover {
+  z-index: 1;
+  transform: scale(1.2);
 }
 
 .img-icon-peajes {
@@ -53,6 +63,11 @@ body {
   margin: 2% 0% 2% 0%;
   padding: 2% 0% 2% 0%;
 }
+
+
+
+
+
 
 
 /* Estilos para pantallas más pequeñas, como smartphones */
@@ -196,7 +211,12 @@ body {
 
   .div-nosotros-text {
     display: block;
-    padding: 5% 10% 5% 10%
+    padding: 15% 10% 1% 10%
+  }
+
+  .div-nosotros-form {
+    display: block;
+    padding: 1% 5% 1% 5%
   }
 
   // q-my-xl
@@ -224,7 +244,7 @@ body {
     overflow: hidden;
     // max-width: 800px;
     // height: 600px;
-    margin: 0% 10% 0% 10%;
+    margin: 0% 2% 0% 2%;
   }
 
   .number-text-inline {
@@ -346,8 +366,90 @@ body {
     font-size: 2vw;
   }
 
-
   /* Agrega estilos adicionales para otros elementos según tus necesidades */
+
+  // @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+  .contact_form {
+    padding: 5% 5% 5% 5%;
+    width: auto;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+  }
+
+
+
+  label {
+    display: block;
+    float: center;
+  }
+
+
+  button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: $primary;
+    border-color: $secondary;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+  }
+
+
+  button p {
+    color: #fff;
+  }
+
+  .aviso {
+    font-size: 13px;
+    color: #0e0e0e;
+  }
+
+  h1 {
+    font-size: 39px;
+    text-align: letf;
+    padding-bottom: 20px;
+  }
+
+
+  h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+  }
+
+
+  p {
+    font-size: 14px;
+    color: #0e0e0e;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #a8a8a8;
+  }
+
+
+  ::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+  }
+
+  .div-icon-contacto {
+    padding: 15% 10% 15% 10%;
+  }
+
+  .iconos-fotter {
+    display: none;
+  }
+
 }
 
 /* Estilos para pantallas medianas, como tablets */
@@ -452,7 +554,12 @@ body {
 
   .div-nosotros-text {
     display: block;
-    padding: 5% 10% 5% 10%
+    padding: 15% 10% 1% 10%
+  }
+
+  .div-nosotros-form {
+    display: block;
+    padding: 1% 5% 1% 5%
   }
 
   // --------top   right   buttom   left---------
@@ -474,7 +581,7 @@ body {
     overflow: hidden;
     // max-width: 800px;
     // height: 600px;
-    margin: 0% 10% 0% 10%;
+    margin: 0% 2% 0% 2%;
   }
 
   .number-text-inline {
@@ -595,6 +702,86 @@ body {
   }
 
   /* Agrega estilos adicionales para otros elementos según tus necesidades */
+
+  /* Importación de fuentes de google fonts */
+  // @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+  .contact_form {
+    padding: 5% 5% 5% 5%;
+    width: auto;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+  }
+
+
+
+  label {
+    display: block;
+    float: center;
+  }
+
+
+  button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: $primary;
+    border-color: $secondary;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+  }
+
+
+  button p {
+    color: #fff;
+  }
+
+  .aviso {
+    font-size: 13px;
+    color: #0e0e0e;
+  }
+
+  h1 {
+    font-size: 39px;
+    text-align: letf;
+    padding-bottom: 20px;
+  }
+
+
+  h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+  }
+
+
+  p {
+    font-size: 14px;
+    color: #0e0e0e;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #a8a8a8;
+  }
+
+
+  ::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+  }
+
+  .div-icon-contacto {
+    padding: 15% 10% 15% 10%;
+  }
+
 }
 
 /* Estilos para pantallas grandes, como computadoras de escritorio */
@@ -698,7 +885,12 @@ body {
 
   .div-nosotros-text {
     display: block;
-    padding: 15% 10% 0% 10%
+    padding: 15% 10% 1% 10%
+  }
+
+  .div-nosotros-form {
+    display: block;
+    padding: 1% 5% 1% 5%
   }
 
   .div-somos-index {
@@ -721,7 +913,7 @@ body {
     overflow: hidden;
     // max-width: 800px;
     // height: 600px;
-    margin: 0% 10% 0% 10%;
+    margin: 0% 2% 0% 2%;
   }
 
   .number-text-inline {
@@ -761,6 +953,16 @@ body {
     align-items: center;
   }
 
+  .center-icon-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div-icon-contacto {
+    margin: 15% 10% 15% 10%;
+  }
+
   .contenedor {
     position: relative;
   }
@@ -775,6 +977,11 @@ body {
 
   .manito {
     cursor: pointer;
+  }
+
+  .icon-contacto {
+    max-width: 100px;
+    height: 100px
   }
 
   //EFECTO DE CLICK------
@@ -839,9 +1046,99 @@ body {
     font-size: 25px;
   }
 
+  .text-h6 {
+    font-size: 1.5vw;
+  }
+
+  /* Importación de fuentes de google fonts */
+  // @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+  .contact_form {
+    padding: 5% 5% 5% 5%;
+    width: auto;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    background-color: #fbfbfb;
+  }
+
+
+
+  label {
+    display: block;
+    float: center;
+  }
+
+
+  button {
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: $primary;
+    border-color: $secondary;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+  }
+
+
+  button p {
+    color: #fff;
+  }
+
+  .aviso {
+    font-size: 13px;
+    color: #0e0e0e;
+  }
+
+  h1 {
+    font-size: 39px;
+    text-align: letf;
+    padding-bottom: 20px;
+  }
+
+
+  h3 {
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+  }
+
+
+  p {
+    font-size: 14px;
+    color: #0e0e0e;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #a8a8a8;
+  }
+
+
+  ::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+  }
+
+  /* creado por javiniguez.com, Julio 2019 */
+
+  //Estilos para el formulario
+
+
+
 
   /* Agrega estilos adicionales para otros elementos según tus necesidades */
 }
+
+
+
+
+
 
 // @media (min-width: 1025px) {
 
