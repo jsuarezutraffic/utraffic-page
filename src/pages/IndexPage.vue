@@ -23,11 +23,6 @@
           <q-carousel-slide :name="4" img-src="~assets/3x/Recurso22@3x2.jpeg" />
           <q-carousel-slide :name="1" img-src="~assets/3x/tunel2.jpeg" />
         </q-carousel>
-        <!-- <q-img
-          class="rounded-img-bottom-left"
-          src="~assets/3x/Recurso3@3x.jpeg"
-          fit="fill"
-        /> -->
       </div>
 
       <!-- contenedor Somos U Traffic -->
@@ -273,6 +268,7 @@
       </div>
     </div>
   </q-page>
+  <QueHacemos />
 </template>
 
 <script setup>
@@ -280,6 +276,7 @@ import { defineComponent } from "vue";
 import { onMounted } from "vue";
 import { ref } from "vue";
 import { gsap } from "gsap";
+import QueHacemos from "src/pages/QueHacemosPage.vue";
 
 const slide = ref(1);
 

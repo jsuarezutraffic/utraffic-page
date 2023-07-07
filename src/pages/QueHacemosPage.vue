@@ -118,17 +118,9 @@ const its = ref(false);
 const seguridad = ref(false);
 const mantenimiento = ref(false);
 
-const verDiv = ref(false);
 const bounceInLeft = ref("");
 const bounceIn = ref("");
 const zoomInDown = ref("");
-
-const classIconos = ref({
-  peaje: "",
-  its: "",
-  seguridad: "",
-  mantenimiento: "",
-});
 
 const animateElement = () => {
   bounceInLeft.value = "animate__animated animate__bounceInLeft";

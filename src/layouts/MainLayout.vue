@@ -31,14 +31,14 @@
             label="Nosotros"
             to="/nosotros"
           />
-          <q-btn
+          <!-- <q-btn
             size="15px"
             no-caps
             flat
             color="primary"
             label="Qué hacemos"
             to="/quehacemos"
-          />
+          /> -->
           <q-btn
             size="15px"
             no-caps
@@ -47,13 +47,16 @@
             label="Contacto"
             to="/contacto"
           />
-          <!-- <q-btn
+          <q-btn
             no-caps
             size="15px"
             class="q-mx-md"
             color="primary"
             label="Hablemos"
-          /> -->
+            :href="'https://wa.me/' + ascesor.telefono"
+            target="_blank"
+          >
+          </q-btn>
         </div>
       </q-toolbar>
     </q-header>
@@ -165,6 +168,8 @@
 import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 const leftDrawerOpen = ref(false);
+const ascesor = require("/public/jsonConfig.json");
+
 const router = useRouter();
 const inicio = () => {
   router.push("/");
