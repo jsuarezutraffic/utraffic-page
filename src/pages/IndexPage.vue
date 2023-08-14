@@ -17,17 +17,17 @@
           ref="carousel"
           infinite
         >
-          <q-carousel-slide :name="5" img-src="~assets/3x/peaje.jpeg" />
-          <q-carousel-slide :name="2" img-src="~assets/3x/Recurso3@3x.jpeg" />
-          <q-carousel-slide :name="3" img-src="~assets/3x/Recurso7@3x.jpeg" />
-          <q-carousel-slide :name="4" img-src="~assets/3x/Recurso22@3x2.jpeg" />
-          <q-carousel-slide :name="1" img-src="~assets/3x/tunel2.jpeg" />
+          <!-- <q-carousel-slide :name="1" img-src="~assets/3x/peaje.jpeg" /> -->
+          <q-carousel-slide :name="1" img-src="~assets/3x/Recurso3@3x.jpeg" />
+          <!-- <q-carousel-slide :name="1" img-src="~assets/3x/Recurso7@3x.jpeg" /> -->
+          <!-- <q-carousel-slide :name="1" img-src="~assets/3x/Recurso22@3x2.jpeg" /> -->
+          <!-- <q-carousel-slide :name="1" img-src="~assets/3x/tunel2.jpeg" /> -->
         </q-carousel>
       </div>
 
       <!-- contenedor Somos U Traffic -->
       <div class="col-md-6 col-lg-6 div-somos-index" :class="lightSpeedInRight">
-        <p class="title text-weight-bold text-secondary">SOMOS U TRAFFIC</p>
+        <p class="text-h7 text-secondary">UTRAFFIC</p>
 
         <p class="sub-title text-weight-bold text-white text-uppercase">
           SOMOS EL
@@ -40,14 +40,14 @@
           class="sub-title2 text-weight-bold text-secondary"
           style="margin: 5% 0% 5% 0%"
         >
-          Solución integral para peajes, ITS y operación de concesiones viales
+          Solución integral para peajes, ITS y operación de concesiones viales.
         </p>
 
         <p class="text-white text-justify">
           U TRAFFIC es la unión de 4 empresas líderes en su sector, que tomaron
           la decisión de unir esfuerzos para ofrecer un servicio integral a las
           concesiones viales. Gracias a la transferencia de conocimientos y al
-          equipo humano de U Traffic, podemos trasladar la solidez y experiencia
+          equipo humano de UTraffic, podemos trasladar la solidez y experiencia
           de nuestros socios, junto con la integralidad de un servicio
           consolidado, a todos nuestros potenciales clientes.
         </p>
@@ -65,7 +65,7 @@
             style="padding: 5% 5% 5% 5%"
           >
             <div class="col-md-4 col-lg-6">
-              <p class="text-h4 text-primary" style="margin: 0% 0% 0% 0%">
+              <p class="text-h6 text-accent" style="margin: 0% 0% 0% 0%">
                 ¿ Qué hacemos?
               </p>
 
@@ -77,19 +77,20 @@
               </p>
               <p class="text-primary text-justify">
                 Ofrecemos un servicio integral a las concesiones viales. Gracias
-                a la transferencia de conocimientos y al equipo humano de U
-                Traffic, podemos trasladar la solidez y experiencia de nuestros
+                a la transferencia de conocimientos y al equipo humano de
+                UTraffic, podemos trasladar la solidez y experiencia de nuestros
                 socios, junto con la integralidad de un servicio consolidado, a
                 todos nuestros potenciales clientes. De esta manera,
                 proporcionamos soluciones a medida de las necesidades, con
                 confiabilidad y cumplimiento de resultados.
               </p>
-              <q-btn no-caps size="sm" color="accent" label="más info" />
+              <!-- <q-btn no-caps size="sm" color="accent" label="más info" /> -->
             </div>
           </div>
 
           <div
-            class="col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center"
+            class="manito div-big scol-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center"
+            @click="clikArea('peaje')"
           >
             <div class="text-center">
               <q-img
@@ -106,7 +107,8 @@
           </div>
 
           <div
-            class="q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-secondary flex flex-center"
+            class="manito div-big q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-secondary flex flex-center"
+            @click="clikArea('its')"
           >
             <div class="text-center">
               <q-img
@@ -123,7 +125,8 @@
           </div>
 
           <div
-            class="q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-accent flex flex-center"
+            class="manito div-big q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-accent flex flex-center"
+            @click="clikArea('seguridad')"
           >
             <div class="text-center">
               <q-img
@@ -140,7 +143,8 @@
           </div>
 
           <div
-            class="q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center"
+            class="manito div-big q-px-md col-sm-3 col-xs-3 col-md-2 col-lg-2 bg-primary flex flex-center"
+            @click="clikArea('mantenimiento')"
           >
             <div class="text-center">
               <q-img
@@ -165,7 +169,9 @@
             :class="bounceInLeft"
             ref="elementToObserve2"
           >
-            <p class="text-h4 text-weight-bold q-ma-none">
+            <p
+              class="text-h4 text-weight-bold q-ma-none aptos-black text-primary"
+            >
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
           </div>
@@ -187,17 +193,18 @@
         <div class="row">
           <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
             <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
-                {{ counter1 }}
+              <p class="text-h1 text-weight-bold text-primary font-number">
+                {{ counter5 }}
               </p>
               <span class="text-h4 text-primary q-mx-lg">
-                Carriles manuales
+                Carriles manuales y 32 carriles de telepeaje en Colombia
               </span>
             </div>
           </div>
+
           <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
             <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
+              <p class="text-h1 text-weight-bold text-primary font-number">
                 {{ counter2 }}+
               </p>
               <span class="text-h4 text-primary q-mx-lg">
@@ -207,17 +214,27 @@
           </div>
           <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
             <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
+              <p class="text-h1 text-weight-bold text-primary font-number">
+                {{ counter1 }}
+              </p>
+              <span class="text-h4 text-primary q-mx-lg">
+                Carriles manuales y 14 telepeajes en el extranjero
+              </span>
+            </div>
+          </div>
+          <!-- <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
+            <div class="number-text-inline">
+              <p class="text-h1 text-weight-bold text-primary font-number">
                 {{ counter3 }}
               </p>
               <span class="text-h4 text-primary q-mx-lg">
                 Telepeajes en el extranjero
               </span>
             </div>
-          </div>
+          </div> -->
           <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
             <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
+              <p class="text-h1 text-weight-bold text-primary font-number">
                 {{ counter4 }}+
               </p>
               <span class="text-h4 text-primary q-mx-lg">
@@ -227,26 +244,7 @@
           </div>
           <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
             <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
-                {{ counter5 }}
-              </p>
-              <span class="text-h4 text-primary q-mx-lg">
-                Carriles manuales y 32 carriles de telepeaje en Colombia
-              </span>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
-            <div style="margin: 0 0 0 10%">
-              <span class="text-h4 text-primary"> O&M en más de </span>
-              <p class="text-h2 text-weight-bold text-primary">
-                {{ counter6 }}km
-              </p>
-              <span class="text-h4 text-primary"> de vía consecionada </span>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
-            <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
+              <p class="text-h1 text-weight-bold text-primary font-number">
                 {{ counter7 }}
               </p>
               <span class="text-h4 text-primary q-mx-lg">
@@ -255,12 +253,24 @@
             </div>
           </div>
           <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
+            <div style="margin: 0 0 0 10%">
+              <span class="text-h4 text-primary"> O&M en más de </span>
+              <p
+                class="text-h1 text-weight-bold text-primary font-number2 q-py-sm"
+              >
+                {{ counter6 }}Km
+              </p>
+              <span class="text-h4 text-primary"> de vía concesionada </span>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xs-12 col-sm-6 col-md-6 marginy-etiquetas">
             <div class="number-text-inline">
-              <p class="text-h2 text-weight-bold text-primary">
-                {{ counter8 }}km
+              <p class="text-h1 text-weight-bold text-primary font-number">
+                {{ counter8 }}Km
               </p>
               <span class="text-h4 text-primary q-mx-lg">
-                Peajes en operación
+                De ITS en tuneles en 36 proyectos
               </span>
             </div>
           </div>
@@ -268,27 +278,32 @@
       </div>
     </div>
   </q-page>
-  <QueHacemos />
+  <!-- <QueHacemos /> -->
 </template>
 
 <script setup>
 import { defineComponent } from "vue";
+import { LocalStorage } from "quasar";
 import { onMounted } from "vue";
 import { ref } from "vue";
 import { gsap } from "gsap";
+import { useRouter } from "vue-router";
 import QueHacemos from "src/pages/QueHacemosPage.vue";
 
 const slide = ref(1);
-
+const route = useRouter();
 const lightSpeedInRight = ref("");
 const lightSpeedInLeft = ref("");
 
 const bounceInLeft = ref("");
+const bounceIn = ref("");
 const animateElement = () => {
   bounceInLeft.value = "animate__animated animate__bounceInLeft";
+  bounceIn.value = "animate__animated animate__bounceIn";
   lightSpeedInRight.value = "animate__animated animate__lightSpeedInRight";
   lightSpeedInLeft.value = "animate__animated animate__lightSpeedInLeft";
   setTimeout(() => {
+    bounceIn.value = "";
     bounceInLeft.value = "";
   }, 1000);
 };
@@ -422,6 +437,11 @@ const handleElementVisible = (target) => {
   count();
   animateElement();
   // Lógica para manejar cuando el elemento es visible cada vez que se muestra
+};
+
+const clikArea = (option) => {
+  LocalStorage.set("option", option);
+  route.push("/quehacemos");
 };
 
 onMounted(() => {

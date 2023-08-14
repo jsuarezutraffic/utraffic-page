@@ -9,16 +9,14 @@
           <div class="row justify-between q-pa-xl">
             <div class="col-md-12 col-lg-12">
               <p
-                class="text-h2 text-weight-bold text-left q-px-lg text-uppercase"
+                class="text-h2 negrita text-left q-px-lg text-uppercase text-primary"
               >
                 ITS
               </p>
 
-              <p class="text-h4 text-left q-px-lg">
+              <p class="text-h4 text-left q-px-lg text-primary">
                 Solución para el cumplimiento con el contrato ITS de los
-                <span class="text-weight-bold"
-                  >proyectos en concesión 4G y 5G.</span
-                >
+                <span class="negrita">proyectos en concesión 4G y 5G.</span>
               </p>
             </div>
             <div class="col div-box-its" ref="elementToObserve" :class="swing">
@@ -50,7 +48,7 @@
                     fit="scale-down"
                   />
                   <span class="text-h4 text-center">
-                    Equipo certificado humano
+                    Equipo humano certificado
                   </span>
                 </div>
               </div>
@@ -81,8 +79,8 @@
       :class="bounceInLeft"
       ref="elementToObserve2"
     >
-      <div class="div-overlay-its bg-accent text-white text-left q-pa-lg">
-        <p class="text-h4 text-weight-bold q-ma-none">
+      <div class="div-overlay-its bg-accent text-left q-pa-lg">
+        <p class="text-h4 text-weight-bold q-ma-none aptos-black text-white">
           MÁS DE 15 AÑOS DE EXPERIENCIA
         </p>
       </div>
@@ -96,7 +94,7 @@
       >
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <div class="number-text-inline show-etiquetas-its">
-            <p class="text-h1 text-weight-bold text-primary">
+            <p class="text-h1 text-weight-bold text-primary font-number">
               {{ counter1 }}km
             </p>
             <span class="text-h4 text-primary q-mx-lg">
@@ -106,7 +104,9 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <div class="number-text-inline show-etiquetas-its">
-            <p class="text-h1 text-weight-bold text-primary">{{ counter2 }}+</p>
+            <p class="text-h1 text-weight-bold text-primary font-number">
+              {{ counter2 }}+
+            </p>
             <span class="text-h4 text-primary q-mx-lg">
               proyectos entregados
             </span>
@@ -114,7 +114,9 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <div class="number-text-inline show-etiquetas-its">
-            <p class="text-h1 text-weight-bold text-primary">{{ counter3 }}+</p>
+            <p class="text-h1 text-weight-bold text-primary font-number">
+              {{ counter3 }}+
+            </p>
             <span class="text-h4 text-primary q-mx-lg">
               Km de ITS de cielo abierto
             </span>
@@ -130,19 +132,28 @@
         ref="elementToObserve3"
       >
         <div class="col-md-3 col-lg-3 q-mx-lg">
-          <p class="text-h1 text-weight-bold text-primary" style="margin: 0%">
+          <p
+            class="text-h1 text-weight-bold text-primary font-number"
+            style="margin: 0%"
+          >
             {{ counter1 }}km
           </p>
           <span class="text-h4 text-primary">de túneles en 36 proyectos </span>
         </div>
         <div class="col-md-3 col-lg-3 q-mx-lg">
-          <p class="text-h1 text-weight-bold text-primary" style="margin: 0%">
+          <p
+            class="text-h1 text-weight-bold text-primary font-number"
+            style="margin: 0%"
+          >
             {{ counter2 }}+
           </p>
           <span class="text-h4 text-primary">proyectos entregados </span>
         </div>
         <div class="col-md-3 col-lg-3 q-mx-lg">
-          <p class="text-h1 text-weight-bold text-primary" style="margin: 0%">
+          <p
+            class="text-h1 text-weight-bold text-primary font-number"
+            style="margin: 0%"
+          >
             {{ counter3 }}+
           </p>
           <span class="text-h4 text-primary">Km de ITS de cielo abierto </span>

@@ -10,7 +10,7 @@
             :class="fadeInRight"
             ref="elementToObserve3"
           >
-            <p class="text-h4 text-white text-weight-bold">U TOLL</p>
+            <p class="text-h4 text-secondary text-weight-bold">U TOLL</p>
             <span class="text-weight-regular"
               >Software propio para la gestión, control de tráfico y recaudo en
               peajes. Soporta diferentes modelos de operación y tecnología, así
@@ -23,7 +23,9 @@
             :class="bounceInLeft"
             ref="elementToObserve2"
           >
-            <p class="text-h4 text-weight-bold q-ma-none">
+            <p
+              class="text-h4 text-weight-bold q-ma-none aptos-black text-primary"
+            >
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
           </div>
@@ -109,38 +111,46 @@
         ref="elementToObserve"
       >
         <div class="col-xs-12 col-md-12 col-lg-12">
-          <div style="padding: 4% 0% 3% 4%" class="text-primary">
-            <p class="text-h2 text-weight-bold text-uppercase">EXPERIENCIA</p>
-            <p class="sub-title">
+          <div style="padding: 4% 0% 3% 4%">
+            <p class="text-h2 text-weight-bold text-uppercase text-primary">
+              EXPERIENCIA
+            </p>
+            <p class="sub-title text-primary">
               Integrador para soluciones
-              <span class="text-weight-bold"> IP REV.</span>
+              <span class="text-primary negrita"> IP REV.</span>
             </p>
           </div>
         </div>
-        <div class="col-xs-6 col-md-3 col-lg-3">
+        <div class="col-xs-12 col-md-6 col-lg-6">
           <div class="number-text-inline">
-            <p class="text-h1 text-weight-bold text-primary">{{ counter1 }}</p>
-            <span class="text-h4 text-primary q-mx-lg">
-              Carriles manuales
-            </span>
-          </div>
-        </div>
-        <div class="col-xs-6 col-md-3 col-lg-3">
-          <div class="number-text-inline">
-            <p class="text-h1 text-weight-bold text-primary">{{ counter2 }}</p>
-            <span class="text-h4 text-primary q-mx-lg">
-              Telepeajes en el extranjero
-            </span>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-5 col-lg-5">
-          <div class="number-text-inline">
-            <p class="text-h1 text-weight-bold text-primary">{{ counter3 }}</p>
+            <p class="text-h1 text-weight-bold text-primary font-number">
+              {{ counter3 }}
+            </p>
             <span class="text-h4 text-primary q-mx-lg">
               Carriles manuales y 32 carriles telepeaje en Colombia
             </span>
           </div>
         </div>
+        <div class="col-xs-6 col-md-6 col-lg-6">
+          <div class="number-text-inline">
+            <p class="text-h1 text-weight-bold text-primary font-number">
+              {{ counter1 }}
+            </p>
+            <span class="text-h4 text-primary q-mx-lg">
+              Carriles manuales y 14 telepeajes en el extranjero
+            </span>
+          </div>
+        </div>
+        <!-- <div class="col-xs-6 col-md-3 col-lg-3">
+          <div class="number-text-inline">
+            <p class="text-h1 text-weight-bold text-primary font-number">
+              {{ counter2 }}
+            </p>
+            <span class="text-h4 text-primary q-mx-lg">
+              Telepeajes en el extranjero
+            </span>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>

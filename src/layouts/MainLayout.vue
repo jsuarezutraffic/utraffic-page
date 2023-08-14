@@ -31,14 +31,14 @@
             label="Nosotros"
             to="/nosotros"
           />
-          <!-- <q-btn
+          <q-btn
             size="15px"
             no-caps
             flat
             color="primary"
             label="Qué hacemos"
             to="/quehacemos"
-          /> -->
+          />
           <q-btn
             size="15px"
             no-caps
@@ -68,7 +68,6 @@
             <q-item-section avatar>
               <q-icon name="home_work" />
             </q-item-section>
-
             <q-item-section>Nosotros </q-item-section>
           </q-item>
           <q-item clickable v-ripple to="/quehacemos">
@@ -104,7 +103,7 @@
     <!-- footer -->
     <div class="text-white footer-container">
       <div class="row bg-accent q-py-lg iconos-fotter">
-        <div class="col text-center" :class="swing">
+        <!-- <div class="col text-center" :class="swing">
           <a
             href="https://es-la.facebook.com/"
             target="_blank"
@@ -114,8 +113,8 @@
               class="fa-brands fa-facebook manito"
               size="md"
           /></a>
-        </div>
-        <div class="col text-center" :class="swing">
+        </div> -->
+        <!-- <div class="col text-center" :class="swing">
           <a
             href="https://www.instagram.com/"
             target="_blank"
@@ -125,7 +124,7 @@
               class="fa-brands fa-instagram manito"
               size="md"
           /></a>
-        </div>
+        </div> -->
         <div class="col text-center" :class="swing">
           <a
             href="https://www.linkedin.com/"
@@ -153,12 +152,12 @@
         </div>
         <div class="col-sm-2 col-xs-4 text-left q-px-md">
           <p class="text-secondary">Escríbenos</p>
-          <p class="text-white">hola@utraffic.co<br />Oficina 603</p>
+          <p class="text-white">hola@utraffic.co</p>
         </div>
         <div class="col-sm-2 col-xs-4 text-left q-px-md">
           <p class="text-secondary">Llámanos</p>
           <p class="text-white">(601) 572 4311</p>
-          <p class="text-white">+57 (318) 464 7436</p>
+          <p class="text-white">+57 (318) 464 7435</p>
         </div>
       </div>
     </div>
@@ -169,15 +168,8 @@ import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 const leftDrawerOpen = ref(false);
 const ascesor = require("/public/jsonConfig.json");
-
 const router = useRouter();
-const inicio = () => {
-  router.push("/");
-};
 
-const toggleLeftDrawer = () => {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-};
 const handleMouseOver = () => {
   animateElement();
 };
@@ -188,7 +180,10 @@ const animateElement = () => {
     swing.value = "";
   }, 1000);
 };
-
+const inicio = () => {
+  const toPath = "/";
+  router.push(toPath);
+};
 const elementToObserve = ref(null);
 onMounted(() => {});
 

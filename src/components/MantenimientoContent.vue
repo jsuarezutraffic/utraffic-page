@@ -10,7 +10,7 @@
             :class="bounceInLeft"
             ref="elementToObserve2"
           >
-            <p class="text-h4 text-weight-bold q-ma-none">
+            <p class="text-h4 text-primary q-ma-none aptos-black">
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
           </div>
@@ -92,14 +92,17 @@
       >
         <div class="col-xs-6 col-md-4 col-lg-4 q-ma-lg">
           <span class="text-h4 text-primary"> O&M en más de </span>
-          <p class="text-h1 text-weight-bold text-primary" style="margin: 0%">
+          <p class="text-h1 text-primary font-number2 q-py-sm">
             {{ counter1 }}km
           </p>
-          <span class="text-h4 text-primary"> de vía consecionada </span>
+          <span class="text-h4 text-primary"> de vía concesionada </span>
         </div>
         <div class="col-xs-6 col-md-4 col-lg-4 q-ma-lg">
           <span class="text-h4 text-primary"> Operación de </span>
-          <p class="text-h1 text-weight-bold text-primary" style="margin: 0%">
+          <p
+            class="text-h1 text-weight-bold text-primary font-number"
+            style="margin: 0%"
+          >
             {{ counter2 }} peajes
           </p>
         </div>

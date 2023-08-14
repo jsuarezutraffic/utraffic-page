@@ -1,12 +1,15 @@
 <template>
-  <div class="row">
+  <div class="row bg-white">
     <div class="col-md-12 col-lg-12">
       <div class="row">
         <div class="col-md-12 col-lg-12 container-img">
-          <div class="row q-pa-xl justify-center" style="margin-bottom: 5%">
+          <div
+            class="row q-pa-xl justify-center"
+            style="margin-bottom: 5%; margin-top: -7%"
+          >
             <div class="col-xs-12 col-md-12 col-lg-12 q-my-xl">
               <p
-                class="text-h2 text-white text-weight-bold text-left q-px-lg text-uppercase"
+                class="text-h2 text-primary text-weight-bold text-left q-px-lg text-uppercase"
               >
                 SEGURIDAD Y SEÑALIZACIÓN
               </p>
@@ -24,7 +27,7 @@
                 <div class="text-center">
                   <p class="text-h5 text-white text-left text-uppercase">
                     DISEÑO DE LA<span class="text-h5 text-weight-bold">
-                      SOLUCIÓN DE SEÑALIZACIÓN Y SEGURIDAD VÍAL
+                      SOLUCIÓN DE SEÑALIZACIÓN Y SEGURIDAD VIAL
                     </span>
                   </p>
 
@@ -54,7 +57,7 @@
               :class="swing"
             >
               <div
-                class="bg-secondary text-left q-pa-lg center-vertical-div"
+                class="bg-primary text-left q-pa-lg center-vertical-div"
                 style="height: 100%"
               >
                 <div class="text-center">
@@ -64,8 +67,8 @@
                     fit="scale-down"
                     style="max-width: 200px; height: 200px"
                   />
-                  <p class="text-h5 text-primary text-left text-uppercase">
-                    TALLERES PROPIOS PARA LA FABRICACIÓN Y SEÑALIZACIÓN<span
+                  <p class="text-h5 text-white text-left text-uppercase">
+                    TALLERES PROPIOS PARA LA FABRICACIÓN DE SEÑALIZACIÓN<span
                       class="text-h5 text-weight-bold"
                     >
                       VERTICAL Y HORIZONTAL
@@ -90,7 +93,7 @@
               :class="swing"
             >
               <div
-                class="bg-white text-left q-pa-lg center-vertical-div"
+                class="bg-tertiary text-left q-pa-lg center-vertical-div"
                 style="height: 100%"
               >
                 <div class="text-center">
@@ -112,11 +115,11 @@
             </div>
           </div>
           <div
-            class="div-overlay-security bg-accent text-white text-left q-pa-lg"
+            class="div-overlay-security bg-accent text-left q-pa-lg"
             :class="bounceInLeft"
             ref="elementToObserve2"
           >
-            <p class="text-h4 text-weight-bold q-ma-none">
+            <p class="text-h4 q-ma-none text-white aptos-black">
               MÁS DE 15 AÑOS DE EXPERIENCIA
             </p>
           </div>
@@ -124,17 +127,17 @@
       </div>
     </div>
 
-    <div class="col-md-12 col-lg-12 bg-white q-py-xl q-my-lg">
+    <div class="col-md-12 col-lg-12 bg-primary q-py-xl q-my-lg">
       <div class="row text-secondary">
         <div class="col-md-6 col-lg-6 center-vertical-div">
           <div class="row">
             <div class="col-md-12 col-lg-12 q-pa-lg">
               <div class="text-left">
                 <div class="number-text-inline-short" ref="elementToObserve">
-                  <p class="text-h1 text-weight-bold text-accent">
+                  <p class="text-h1 text-weight-bold text-tertiary font-number">
                     {{ counter1 }}km
                   </p>
-                  <span class="text-h4 text-primary q-mx-lg">
+                  <span class="text-h4 text-white q-mx-lg">
                     de vías intervenidas
                   </span>
                 </div>
@@ -143,10 +146,10 @@
             <div class="col-md-12 col-lg-12 q-pa-lg">
               <div class="text-left">
                 <div class="number-text-inline-short" ref="elementToObserve">
-                  <p class="text-h1 text-weight-bold text-accent">
+                  <p class="text-h1 text-weight-bold text-tertiary font-number">
                     +{{ counter2 }}K
                   </p>
-                  <span class="text-h4 text-primary q-mx-lg">
+                  <span class="text-h4 text-white q-mx-lg">
                     Metros lineales de defensas instaladas
                   </span>
                 </div>
@@ -155,10 +158,10 @@
             <div class="col-md-12 col-lg-12 q-pa-lg">
               <div class="text-left">
                 <div class="number-text-inline-short" ref="elementToObserve">
-                  <p class="text-h1 text-weight-bold text-accent">
+                  <p class="text-h1 text-weight-bold text-tertiary font-number">
                     +{{ counter3.toLocaleString() }}
                   </p>
-                  <span class="text-h4 text-primary q-mx-lg">
+                  <span class="text-h4 text-white q-mx-lg">
                     Señales verticales instaladas
                   </span>
                 </div>

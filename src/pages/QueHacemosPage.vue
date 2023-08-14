@@ -112,11 +112,16 @@ import Mantenimiento from "src/components/MantenimientoContent.vue";
 import Seguridad from "src/components/SeguridadContent.vue";
 import Its from "src/components/ITSContent.vue";
 import { ref } from "vue";
+import { LocalStorage } from "quasar";
 
-const peaje = ref(true);
-const its = ref(false);
-const seguridad = ref(false);
-const mantenimiento = ref(false);
+const peaje = ref(LocalStorage.getItem("option") == "peaje" ? true : false);
+const its = ref(LocalStorage.getItem("option") == "its" ? true : false);
+const seguridad = ref(
+  LocalStorage.getItem("option") == "seguridad" ? true : false
+);
+const mantenimiento = ref(
+  LocalStorage.getItem("option") == "mantenimiento" ? true : false
+);
 
 const bounceInLeft = ref("");
 const bounceIn = ref("");

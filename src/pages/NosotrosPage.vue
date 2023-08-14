@@ -6,8 +6,9 @@
           <p class="text-h4 text-weight-bold text-white">
             SOMOS EL
             <span class="text-italic text-weight-regular text-secondary"
-              >ONE STOP SHOP </span
-            >CONCESIONES VIALES
+              >ONE STOP SHOP
+            </span>
+            DE LAS CONCESIONES VIALES
           </p>
 
           <p
@@ -35,7 +36,7 @@
         <div
           class="col-md-12 col-lg-12 text-center bg-secondary text-h3 q-pa-sm q-my-xl text-primary div-rounded-bottom-right"
         >
-          U con <span class="text-weight-bold q-my-lg">U de Union</span>
+          U con <span class="text-weight-bold q-my-lg">U de Unión</span>
         </div>
         <q-img src="~assets/3x/Recurso24(2)@3x.png" fit="fill" />
       </div>
