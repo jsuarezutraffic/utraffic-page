@@ -191,6 +191,9 @@ const handleElementVisible = (target) => {
   animateElement();
   // Lógica para manejar cuando el elemento es visible cada vez que se muestra
 };
+function toggleLeftDrawer() {
+  leftDrawerOpen.value = !leftDrawerOpen.value;
+}
 </script>
 
 <style lang="scss">
